@@ -72,41 +72,45 @@ Implementation notes:
 
 ---
 
-### CTRL-013: Remove Legacy AIOS References from Documentation
+### CTRL-013: Prepare WordPress Content Import Checklist
 
 Status: TESTING
 
-Owner: Codex
+Owner: ChatGPT / Codex
 
-Priority: High
+Priority: Medium
 
 Context:
 
-The user's active AIOS workflow now uses the ChatGPT + Codex operating model. The project documentation must reflect the current workflow.
+Create the WordPress content import checklist and mapping document for converting repository markdown content into WordPress draft pages and posts.
 
 Scope:
 
-- Search the active AIOS documentation for legacy workflow references.
-- Remove or revise legacy role and review language.
-- Replace review language with ChatGPT-led review, User + ChatGPT reconciliation, and Codex implementation after approved task definition.
+- Create /docs/WordPress_Content_Import_Checklist.md.
+- Map required pages to WordPress Pages.
+- Map resource drafts to WordPress Posts and recommended categories.
+- Define post import, page import, post-import validation, and publishing order checklists.
+- Keep CTRL-012 in TESTING unless reviewed and accepted.
+- Do not install WordPress.
+- Do not change server configuration.
 - Do not add application logic.
 - Do not modify SheetBot files.
 
 Acceptance criteria:
 
-- No legacy workflow references remain in active AIOS documentation.
-- AIOS role descriptions show ChatGPT + Codex only.
-- TASKS.md reflects CTRL-001 as DONE.
-- No application logic is added.
-- No SheetBot files are modified.
+- WordPress_Content_Import_Checklist.md exists under /docs.
+- Required WordPress pages are mapped.
+- First 10 resource drafts are mapped to recommended WordPress categories.
+- Import and validation checklists are included.
+- Publishing order is documented.
 
 Implementation notes:
 
-- Searched the repository for legacy workflow references.
-- Removed legacy role language from Project_Context.md.
-- Updated Engineering_Rules.md to describe ChatGPT-led review, User + ChatGPT reconciliation, and Codex execution.
-- Updated README.md and HANDOFF.md to reflect the current ChatGPT + Codex AIOS operating model.
-- No application logic was added.
+- WordPress content import checklist created.
+- No WordPress installation performed.
+- No server configuration changed.
+- No application logic added.
+- No SheetBot files modified.
 
 ---
 
