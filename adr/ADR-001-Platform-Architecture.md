@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed
+Accepted
 
 ## Context
 
@@ -16,23 +16,26 @@ This project follows the current AIOS workflow with ChatGPT and Codex only. Chat
 
 ## Decision
 
-The initial recommended direction is to start content-first and avoid overengineering.
+Use WordPress for v1 of the CiviCore Resource and Template Library.
 
-WordPress is acceptable for fast publishing, SEO plugins, editorial workflow, AdSense readiness, and low-friction content management.
+Rationale:
 
-Laravel may be considered later if custom tools, premium template packs, account features, deeper automation, or CiviCore-specific integrations become central to the project.
-
-No final platform decision is accepted yet. This ADR records the initial proposed direction for review.
+- The project is content-first.
+- WordPress supports fast publishing, categories, tags, SEO plugins, sitemap generation, drafts, scheduled posts, and AdSense readiness.
+- It reduces development time and avoids premature overengineering.
+- Laravel may be considered later if the project grows into custom tools, premium template packs, account-based downloads, or AI-assisted generation workflows.
 
 ## Consequences
 
-Starting content-first allows the project to publish useful resources quickly and validate demand before investing in custom application features.
+Using WordPress for v1 should support a faster launch and easier content management.
 
-Using WordPress initially may reduce development time and make publishing easier, but it may require later migration or integration work if the project grows into a custom tool and premium product platform.
+The initial build should require lower custom development effort than a custom Laravel application.
 
-Deferring Laravel reduces initial complexity, but custom calculators, template generators, payment flows, and automation workflows may require a more application-oriented stack later.
+Future custom tools may require WordPress plugins, separate Laravel apps, or a later migration or hybrid architecture.
 
-The project should preserve content portability where practical so future migration remains possible.
+Security and plugin discipline will be important. WordPress core, themes, and plugins must be maintained carefully, and unnecessary plugins should be avoided.
+
+The project should preserve content portability where practical so future migration or hybrid integration remains possible.
 
 ## Alternatives Considered
 

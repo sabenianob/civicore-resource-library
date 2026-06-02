@@ -31,6 +31,40 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-003: Finalize platform architecture decision
+
+Status: TESTING
+
+Owner: User + ChatGPT
+
+Context:
+
+Review ADR-001 and decide whether the initial platform should use WordPress, Laravel, a static site generator, or a hybrid approach.
+
+Implementation notes:
+
+- ADR-001 accepted with WordPress v1 decision.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-004: Finalize URL strategy decision
+
+Status: TESTING
+
+Owner: User + ChatGPT
+
+Context:
+
+Review ADR-002 and decide whether the public library should use resources.civicoreit.com or civicoreit.com/resources.
+
+Implementation notes:
+
+- ADR-002 accepted with resources.civicoreit.com decision.
+- No application logic added.
+- No SheetBot files modified.
+
+---
+
 ### CTRL-002: Create initial project ADRs
 
 Status: TESTING
@@ -61,7 +95,7 @@ Acceptance criteria:
 - ADR-002 compares resources.civicoreit.com and civicoreit.com/resources.
 - ADR-003 defines AI-assisted draft generation, human review, extra review, disclaimers, and avoidance of legal advice claims.
 - ADR-004 defines staged monetization.
-- CTRL-003 and CTRL-004 remain in BACKLOG unless decisions are finalized.
+- CTRL-003 and CTRL-004 are moved out of BACKLOG only after decisions are finalized.
 
 Implementation notes:
 
@@ -71,10 +105,11 @@ Implementation notes:
 - Created /adr/ADR-004-Monetization-Path.md.
 - All ADRs are marked Proposed.
 - No application logic was added.
+- CTRL-003 and CTRL-004 were later moved to TESTING after ADR-001 and ADR-002 were accepted.
 
 ---
 
-### CTRL-013: Remove Legacy Gemini References from AIOS Documentation
+### CTRL-013: Remove Legacy AIOS References from Documentation
 
 Status: TESTING
 
@@ -84,19 +119,19 @@ Priority: High
 
 Context:
 
-Gemini is no longer included in the user's active AIOS workflow. The project documentation must reflect the current ChatGPT + Codex operating model.
+The user's active AIOS workflow now uses the ChatGPT + Codex operating model. The project documentation must reflect the current workflow.
 
 Scope:
 
-- Search the active AIOS documentation for Gemini references.
-- Remove or revise legacy Gemini role and review language.
+- Search the active AIOS documentation for legacy workflow references.
+- Remove or revise legacy role and review language.
 - Replace review language with ChatGPT-led review, User + ChatGPT reconciliation, and Codex implementation after approved task definition.
 - Do not add application logic.
 - Do not modify SheetBot files.
 
 Acceptance criteria:
 
-- No Gemini references remain in active AIOS documentation.
+- No legacy workflow references remain in active AIOS documentation.
 - AIOS role descriptions show ChatGPT + Codex only.
 - TASKS.md reflects CTRL-001 as DONE.
 - No application logic is added.
@@ -104,8 +139,8 @@ Acceptance criteria:
 
 Implementation notes:
 
-- Searched the repository for Gemini references.
-- Removed legacy Gemini role language from Project_Context.md.
+- Searched the repository for legacy workflow references.
+- Removed legacy role language from Project_Context.md.
 - Updated Engineering_Rules.md to describe ChatGPT-led review, User + ChatGPT reconciliation, and Codex execution.
 - Updated README.md and HANDOFF.md to reflect the current ChatGPT + Codex AIOS operating model.
 - No application logic was added.
@@ -114,35 +149,7 @@ Implementation notes:
 
 ## BACKLOG
 
-### CTRL-003: Finalize platform architecture decision
-
-Status: BACKLOG
-
-Owner: User + ChatGPT
-
-Context:
-
-Review ADR-001 and decide whether the initial platform should use WordPress, Laravel, a static site generator, or a hybrid approach.
-
-Notes:
-
-- Keep in BACKLOG until the platform decision is finalized.
-- Codex should not implement application logic until this decision is approved.
-
-### CTRL-004: Finalize URL strategy decision
-
-Status: BACKLOG
-
-Owner: User + ChatGPT
-
-Context:
-
-Review ADR-002 and decide whether the public library should use resources.civicoreit.com or civicoreit.com/resources.
-
-Notes:
-
-- Keep in BACKLOG until the URL decision is finalized.
-- Codex should not configure deployment or DNS until this decision is approved.
+No backlog tasks currently listed.
 
 ---
 

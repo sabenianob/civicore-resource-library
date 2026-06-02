@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed
+Accepted
 
 ## Context
 
@@ -17,17 +17,30 @@ The URL choice should reflect whether the library will become a dedicated public
 
 ## Decision
 
-The initial recommended direction is to use https://resources.civicoreit.com if the project will become a dedicated public resource platform.
+Use:
 
-No final URL decision is accepted yet. This ADR records the proposed direction for review.
+```text
+https://resources.civicoreit.com
+```
+
+Rationale:
+
+- The resource library should become a dedicated public resource platform.
+- A subdomain keeps it separate from the main CiviCore company site and SheetBot.
+- It allows independent deployment, analytics, SEO tracking, and future scaling.
+- It supports the long-term identity of the library as a standalone CiviCore public asset.
 
 ## Consequences
 
 Using a subdomain gives the resource library a distinct identity and clearer room to grow into a dedicated public platform.
 
-A dedicated subdomain may require separate hosting, DNS, SSL, analytics, Search Console setup, deployment configuration, sitemap planning, and brand navigation decisions.
+The project will require DNS setup for resources.civicoreit.com.
 
-Using a path under the main domain may be simpler at first and may benefit from the main website's existing domain context, but it can make the resource library feel less independent if it grows substantially.
+The project will require separate SSL configuration.
+
+SEO authority will initially build separately from the main domain path.
+
+The subdomain should be easier to manage as an independent platform with its own deployment, analytics, SEO tracking, sitemap planning, and future scaling decisions.
 
 ## Alternatives Considered
 
