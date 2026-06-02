@@ -31,6 +31,49 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-002: Create initial project ADRs
+
+Status: TESTING
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the initial Architecture Decision Record files for the CiviCore Resource and Template Library.
+
+Scope:
+
+- Create ADR-001 for platform architecture.
+- Create ADR-002 for URL strategy.
+- Create ADR-003 for content review policy.
+- Create ADR-004 for monetization path.
+- Keep all initial ADRs in Proposed status.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- Required ADR files exist under /adr.
+- ADRs use the standard project ADR format.
+- ADR-001 compares WordPress, Laravel, static site generator, and hybrid approach.
+- ADR-002 compares resources.civicoreit.com and civicoreit.com/resources.
+- ADR-003 defines AI-assisted draft generation, human review, extra review, disclaimers, and avoidance of legal advice claims.
+- ADR-004 defines staged monetization.
+- CTRL-003 and CTRL-004 remain in BACKLOG unless decisions are finalized.
+
+Implementation notes:
+
+- Created /adr/ADR-001-Platform-Architecture.md.
+- Created /adr/ADR-002-URL-Strategy.md.
+- Created /adr/ADR-003-Content-Review-Policy.md.
+- Created /adr/ADR-004-Monetization-Path.md.
+- All ADRs are marked Proposed.
+- No application logic was added.
+
+---
+
 ### CTRL-013: Remove Legacy Gemini References from AIOS Documentation
 
 Status: TESTING
@@ -66,6 +109,40 @@ Implementation notes:
 - Updated Engineering_Rules.md to describe ChatGPT-led review, User + ChatGPT reconciliation, and Codex execution.
 - Updated README.md and HANDOFF.md to reflect the current ChatGPT + Codex AIOS operating model.
 - No application logic was added.
+
+---
+
+## BACKLOG
+
+### CTRL-003: Finalize platform architecture decision
+
+Status: BACKLOG
+
+Owner: User + ChatGPT
+
+Context:
+
+Review ADR-001 and decide whether the initial platform should use WordPress, Laravel, a static site generator, or a hybrid approach.
+
+Notes:
+
+- Keep in BACKLOG until the platform decision is finalized.
+- Codex should not implement application logic until this decision is approved.
+
+### CTRL-004: Finalize URL strategy decision
+
+Status: BACKLOG
+
+Owner: User + ChatGPT
+
+Context:
+
+Review ADR-002 and decide whether the public library should use resources.civicoreit.com or civicoreit.com/resources.
+
+Notes:
+
+- Keep in BACKLOG until the URL decision is finalized.
+- Codex should not configure deployment or DNS until this decision is approved.
 
 ---
 
