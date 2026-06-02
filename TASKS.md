@@ -31,6 +31,49 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-011: Prepare WordPress Required Pages Drafts
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Create draft content for the required WordPress non-resource pages.
+
+Scope:
+
+- Create /content/pages.
+- Create homepage, About, Contact, Disclaimer, and Privacy Policy page drafts.
+- Keep the work content/documentation-only.
+- Do not install WordPress.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- /content/pages/homepage.md exists.
+- /content/pages/about-civicore-resources.md exists.
+- /content/pages/contact.md exists.
+- /content/pages/disclaimer.md exists.
+- /content/pages/privacy-policy.md exists.
+- Required page drafts use professional but accessible CiviCore tone.
+- Privacy Policy is clearly a starter draft that requires review before public launch.
+
+Implementation notes:
+
+- Required WordPress page drafts created.
+- Homepage, About, Contact, Disclaimer, and Privacy Policy drafts prepared.
+- No WordPress installation performed.
+- No server configuration changed.
+- No application logic added.
+- No SheetBot files modified.
+
+---
+
 ### CTRL-010: Prepare WordPress Content Publishing Plan
 
 Status: TESTING
