@@ -31,6 +31,44 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-010: Prepare WordPress Content Publishing Plan
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Create the WordPress content publishing plan for converting markdown drafts into WordPress public resources.
+
+Scope:
+
+- Create /docs/WordPress_Content_Publishing_Plan.md.
+- Define content type decisions for posts and pages.
+- Define permalink structure, categories, tags, resource post format, required non-resource pages, homepage structure, draft conversion workflow, SEO checklist, launch publishing sequence, and future improvements.
+- Do not install WordPress.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- WordPress_Content_Publishing_Plan.md exists under /docs.
+- The plan recommends WordPress Posts for resource articles/templates and Pages for fixed site pages.
+- The plan includes permalink, category, tag, post format, page, homepage, conversion, SEO, launch, and future improvement guidance.
+
+Implementation notes:
+
+- WordPress content publishing plan created.
+- No WordPress installation performed.
+- No server configuration changed.
+- No application logic added.
+- No SheetBot files modified.
+
+---
+
 ### CTRL-009: Plan WordPress Staging Deployment
 
 Status: TESTING
