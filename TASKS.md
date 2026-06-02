@@ -31,212 +31,45 @@ No tasks currently ready.
 
 ## TESTING
 
-### CTRL-006: Create publishing workflow
+### CTRL-008: Draft First 10 Resource Pages
 
 Status: TESTING
 
-Owner: Codex
+Owner: ChatGPT / Codex
 
-Priority: High
+Priority: Medium
 
 Context:
 
-Create the publishing workflow document for the CiviCore Resource and Template Library.
+Prepare the first resource content draft structure for the CiviCore Resource and Template Library.
 
 Scope:
 
-- Create /docs/Publishing_Workflow.md.
-- Define content workflow, status lifecycle, review rules, automation boundaries, and WordPress publishing notes.
-- Keep the work documentation-only.
+- Create the /content folder structure.
+- Create first 10 draft placeholder files under /content/drafts.
+- Keep the work content/documentation-only.
 - Do not install WordPress.
 - Do not add application logic.
 - Do not modify SheetBot files.
 
 Acceptance criteria:
 
-- Publishing_Workflow.md exists under /docs.
-- The document includes the full content workflow from topic queue through post-publication review.
-- The document defines the content status lifecycle.
-- The document defines review rules and automation boundaries.
-- The document includes WordPress publishing notes.
+- /content exists.
+- /content/drafts exists.
+- /content/templates exists.
+- /content/guides exists.
+- /content/tools exists.
+- First 10 draft placeholder files exist under /content/drafts.
+- Each placeholder uses the standard draft structure.
 
 Implementation notes:
 
-- Created /docs/Publishing_Workflow.md.
-- Added content workflow covering topic queue, AI-assisted draft generation, human review, SEO metadata, formatting, scheduled publishing, sitemap updates, and post-publication review.
-- Added content status lifecycle from IDEA through RETIRED.
-- Added review rules for general guides, legal-adjacent templates, cautious compliance content, and avoidance of legal advice claims.
-- Added automation boundaries for AI drafting, metadata, related links, publishing limits, legal certainty limits, and direct outreach limits.
-- Added WordPress publishing notes for drafts, categories, tags, scheduled posts, slugs, and disclaimers.
-- No WordPress installation was performed.
-- No application logic was added.
-- No SheetBot files were modified.
-
-### CTRL-007: Create template disclaimer guide
-
-Status: TESTING
-
-Owner: Codex
-
-Priority: High
-
-Context:
-
-Create the template disclaimer guide for the CiviCore Resource and Template Library.
-
-Scope:
-
-- Create /docs/Template_Disclaimer_Guide.md.
-- Define disclaimer patterns for general resources, legal-adjacent templates, project proposals, calculators/tools, and downloadable template packs.
-- Define placement rules and content types requiring disclaimers.
-- Keep the work documentation-only.
-- Do not install WordPress.
-- Do not add application logic.
-- Do not modify SheetBot files.
-
-Acceptance criteria:
-
-- Template_Disclaimer_Guide.md exists under /docs.
-- The document includes all required disclaimer types.
-- The document defines placement rules.
-- The document lists content types requiring disclaimers.
-
-Implementation notes:
-
-- Created /docs/Template_Disclaimer_Guide.md.
-- Added general disclaimer.
-- Added legal-adjacent template disclaimer.
-- Added project proposal disclaimer.
-- Added calculator/tool disclaimer.
-- Added downloadable template pack disclaimer.
-- Added placement rules for visible page placement, downloadable files, legal-adjacent template text, calculators/tools, and proposals/cost estimates.
-- Added list of content types requiring disclaimers.
-- No WordPress installation was performed.
-- No application logic was added.
-- No SheetBot files were modified.
-
----
-
-### CTRL-005: Create initial content strategy
-
-Status: TESTING
-
-Owner: Codex
-
-Priority: High
-
-Context:
-
-Create the initial content strategy document for the CiviCore Resource and Template Library.
-
-Scope:
-
-- Create /docs/Content_Strategy.md.
-- Define content purpose, audience, initial categories, first topic ideas, priority launch batch, standard page format, SEO positioning, content review rules, and future expansion paths.
-- Keep the work documentation-only.
-- Do not install WordPress.
-- Do not add application logic.
-- Do not modify SheetBot files.
-
-Acceptance criteria:
-
-- Content_Strategy.md exists under /docs.
-- The document includes the required categories and first 30 topic ideas grouped by category.
-- The document recommends the first 10 resources to draft and publish first.
-- The document defines the standard content page format.
-- The document includes SEO positioning, content review rules, and future content expansion.
-
-Implementation notes:
-
-- Created /docs/Content_Strategy.md.
-- Included project content purpose and target audience.
-- Added six initial content categories.
-- Added 30 topic ideas grouped by category.
-- Added the recommended first 10 launch resources.
-- Added the standard content page format and SEO positioning.
-- Added content review rules for AI-assisted drafting, human review, legal-adjacent review, and disclaimers.
-- Added future expansion notes for premium packs, downloadable versions, contextual SheetBot links, and simple calculators/tools.
-- No WordPress installation was performed.
-- No application logic was added.
-- No SheetBot files were modified.
-
----
-
-### CTRL-003: Finalize platform architecture decision
-
-Status: TESTING
-
-Owner: User + ChatGPT
-
-Context:
-
-Review ADR-001 and decide whether the initial platform should use WordPress, Laravel, a static site generator, or a hybrid approach.
-
-Implementation notes:
-
-- ADR-001 accepted with WordPress v1 decision.
+- Content draft directory created.
+- First 10 resource draft placeholders created.
+- Empty content folders preserved using .gitkeep files.
+- No WordPress installation yet.
 - No application logic added.
 - No SheetBot files modified.
-
-### CTRL-004: Finalize URL strategy decision
-
-Status: TESTING
-
-Owner: User + ChatGPT
-
-Context:
-
-Review ADR-002 and decide whether the public library should use resources.civicoreit.com or civicoreit.com/resources.
-
-Implementation notes:
-
-- ADR-002 accepted with resources.civicoreit.com decision.
-- No application logic added.
-- No SheetBot files modified.
-
----
-
-### CTRL-002: Create initial project ADRs
-
-Status: TESTING
-
-Owner: Codex
-
-Priority: High
-
-Context:
-
-Create the initial Architecture Decision Record files for the CiviCore Resource and Template Library.
-
-Scope:
-
-- Create ADR-001 for platform architecture.
-- Create ADR-002 for URL strategy.
-- Create ADR-003 for content review policy.
-- Create ADR-004 for monetization path.
-- Keep all initial ADRs in Proposed status.
-- Do not add application logic.
-- Do not modify SheetBot files.
-
-Acceptance criteria:
-
-- Required ADR files exist under /adr.
-- ADRs use the standard project ADR format.
-- ADR-001 compares WordPress, Laravel, static site generator, and hybrid approach.
-- ADR-002 compares resources.civicoreit.com and civicoreit.com/resources.
-- ADR-003 defines AI-assisted draft generation, human review, extra review, disclaimers, and avoidance of legal advice claims.
-- ADR-004 defines staged monetization.
-- CTRL-003 and CTRL-004 are moved out of BACKLOG only after decisions are finalized.
-
-Implementation notes:
-
-- Created /adr/ADR-001-Platform-Architecture.md.
-- Created /adr/ADR-002-URL-Strategy.md.
-- Created /adr/ADR-003-Content-Review-Policy.md.
-- Created /adr/ADR-004-Monetization-Path.md.
-- All ADRs are marked Proposed.
-- No application logic was added.
-- CTRL-003 and CTRL-004 were later moved to TESTING after ADR-001 and ADR-002 were accepted.
 
 ---
 
@@ -285,6 +118,129 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+Completion notes for CTRL-002 through CTRL-007:
+
+- Initial ADRs created.
+- ADR-001 accepted: WordPress for v1.
+- ADR-002 accepted: resources.civicoreit.com.
+- Content strategy created.
+- Publishing workflow created.
+- Template disclaimer guide created.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-007: Create template disclaimer guide
+
+Status: DONE
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the template disclaimer guide for the CiviCore Resource and Template Library.
+
+Implementation notes:
+
+- Template disclaimer guide created.
+- Created /docs/Template_Disclaimer_Guide.md.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-006: Create publishing workflow
+
+Status: DONE
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the publishing workflow document for the CiviCore Resource and Template Library.
+
+Implementation notes:
+
+- Publishing workflow created.
+- Created /docs/Publishing_Workflow.md.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-005: Create initial content strategy
+
+Status: DONE
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the initial content strategy document for the CiviCore Resource and Template Library.
+
+Implementation notes:
+
+- Content strategy created.
+- Created /docs/Content_Strategy.md.
+- No WordPress installation was performed.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-004: Finalize URL strategy decision
+
+Status: DONE
+
+Owner: User + ChatGPT
+
+Context:
+
+Review ADR-002 and decide whether the public library should use resources.civicoreit.com or civicoreit.com/resources.
+
+Implementation notes:
+
+- ADR-002 accepted: resources.civicoreit.com.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-003: Finalize platform architecture decision
+
+Status: DONE
+
+Owner: User + ChatGPT
+
+Context:
+
+Review ADR-001 and decide whether the initial platform should use WordPress, Laravel, a static site generator, or a hybrid approach.
+
+Implementation notes:
+
+- ADR-001 accepted: WordPress for v1.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-002: Create initial project ADRs
+
+Status: DONE
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the initial Architecture Decision Record files for the CiviCore Resource and Template Library.
+
+Implementation notes:
+
+- Initial ADRs created.
+- Created /adr/ADR-001-Platform-Architecture.md.
+- Created /adr/ADR-002-URL-Strategy.md.
+- Created /adr/ADR-003-Content-Review-Policy.md.
+- Created /adr/ADR-004-Monetization-Path.md.
+- No application logic added.
+- No SheetBot files modified.
 
 ### CTRL-001: Create initial AIOS project structure
 
