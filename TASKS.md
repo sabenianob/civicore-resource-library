@@ -31,6 +31,46 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-009: Plan WordPress Staging Deployment
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Create the WordPress staging deployment planning document before installing WordPress or changing server configuration.
+
+Scope:
+
+- Create /docs/WordPress_Staging_Deployment_Plan.md.
+- Document confirmed deployment decisions.
+- Define proposed local, staging, and production environment structure.
+- Document DNS, server, WordPress installation, plugin, staging security, content migration, and production readiness planning.
+- Do not install WordPress.
+- Do not change DNS.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- WordPress_Staging_Deployment_Plan.md exists under /docs.
+- The plan records WordPress v1, resources.civicoreit.com, resources-staging.civicoreit.com, DigitalOcean, server IP planning inputs, and DNS placeholder records.
+- The plan includes server requirements, WordPress installation checklist, conservative plugin categories, staging security rules, content migration plan, and production readiness checklist.
+
+Implementation notes:
+
+- WordPress staging deployment plan created.
+- No WordPress installation performed.
+- No server configuration changed.
+- No application logic added.
+- No SheetBot files modified.
+
+---
+
 ### CTRL-013: Remove Legacy AIOS References from Documentation
 
 Status: TESTING
