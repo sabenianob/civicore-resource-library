@@ -31,6 +31,41 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-016: Prepare DNS for WordPress Staging
+
+Status: TESTING
+
+Owner: User
+
+Priority: High
+
+Context:
+
+The staging domain must point to the verified DigitalOcean server before SSL can be issued and before WordPress staging can be fully validated.
+
+DNS record:
+
+- Type: A
+- Host/Name: resources-staging
+- FQDN: resources-staging.civicoreit.com
+- Points to: 159.65.2.194
+- TTL: default/automatic
+
+Acceptance criteria:
+
+- resources-staging.civicoreit.com resolves to 159.65.2.194.
+- No production resources.civicoreit.com DNS record is required yet.
+- No WordPress installation performed yet.
+- No server configuration changed yet.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- DNS record prepared or added by user.
+- Awaiting propagation confirmation before installation.
+
+---
+
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
 Status: TESTING
