@@ -31,6 +31,51 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-005: Create initial content strategy
+
+Status: TESTING
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the initial content strategy document for the CiviCore Resource and Template Library.
+
+Scope:
+
+- Create /docs/Content_Strategy.md.
+- Define content purpose, audience, initial categories, first topic ideas, priority launch batch, standard page format, SEO positioning, content review rules, and future expansion paths.
+- Keep the work documentation-only.
+- Do not install WordPress.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- Content_Strategy.md exists under /docs.
+- The document includes the required categories and first 30 topic ideas grouped by category.
+- The document recommends the first 10 resources to draft and publish first.
+- The document defines the standard content page format.
+- The document includes SEO positioning, content review rules, and future content expansion.
+
+Implementation notes:
+
+- Created /docs/Content_Strategy.md.
+- Included project content purpose and target audience.
+- Added six initial content categories.
+- Added 30 topic ideas grouped by category.
+- Added the recommended first 10 launch resources.
+- Added the standard content page format and SEO positioning.
+- Added content review rules for AI-assisted drafting, human review, legal-adjacent review, and disclaimers.
+- Added future expansion notes for premium packs, downloadable versions, contextual SheetBot links, and simple calculators/tools.
+- No WordPress installation was performed.
+- No application logic was added.
+- No SheetBot files were modified.
+
+---
+
 ### CTRL-003: Finalize platform architecture decision
 
 Status: TESTING
