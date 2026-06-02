@@ -31,56 +31,6 @@ No tasks currently ready.
 
 ## TESTING
 
-### CTRL-008: Draft First 10 Resource Pages
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: Medium
-
-Context:
-
-Prepare the first resource content draft structure for the CiviCore Resource and Template Library.
-
-Scope:
-
-- Create the /content folder structure.
-- Create first 10 draft placeholder files under /content/drafts.
-- Keep the work content/documentation-only.
-- Do not install WordPress.
-- Do not add application logic.
-- Do not modify SheetBot files.
-
-Acceptance criteria:
-
-- /content exists.
-- /content/drafts exists.
-- /content/templates exists.
-- /content/guides exists.
-- /content/tools exists.
-- First 10 draft placeholder files exist under /content/drafts.
-- Each placeholder uses the standard draft structure.
-
-Implementation notes:
-
-- Content draft directory created.
-- First 10 resource draft placeholders created.
-- First 3 draft resources completed.
-- Batch 2 completed.
-- Right-of-way agreement draft completed.
-- Water system project proposal draft completed.
-- Street lighting project proposal draft completed.
-- Batch 3 completed.
-- Remaining 4 draft resources completed.
-- First 10 resource drafts are now complete.
-- Empty content folders preserved using .gitkeep files.
-- No WordPress installation yet.
-- No application logic added.
-- No SheetBot files modified.
-
----
-
 ### CTRL-013: Remove Legacy AIOS References from Documentation
 
 Status: TESTING
@@ -126,6 +76,58 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-008: Draft First 10 Resource Pages
+
+Status: DONE
+
+Owner: ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Prepare the first resource content draft structure for the CiviCore Resource and Template Library.
+
+Scope:
+
+- Create the /content folder structure.
+- Create first 10 draft placeholder files under /content/drafts.
+- Keep the work content/documentation-only.
+- Do not install WordPress.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- /content exists.
+- /content/drafts exists.
+- /content/templates exists.
+- /content/guides exists.
+- /content/tools exists.
+- First 10 draft placeholder files exist under /content/drafts.
+- Each placeholder uses the standard draft structure.
+
+Implementation notes:
+
+- Content draft directory created.
+- First 10 resource draft placeholders created.
+- First 3 draft resources completed.
+- Batch 2 completed.
+- Right-of-way agreement draft completed.
+- Water system project proposal draft completed.
+- Street lighting project proposal draft completed.
+- Batch 3 completed.
+- Remaining 4 draft resources completed.
+- First 10 resource drafts are now complete.
+- Content review checklist created.
+- Drafts reviewed for completeness, tone, SEO fields, disclaimers, and formatting.
+- Empty content folders preserved using .gitkeep files.
+- No WordPress installation yet.
+- No application logic added.
+- No SheetBot files modified.
+
+---
 
 Completion notes for CTRL-002 through CTRL-007:
 
