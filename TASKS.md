@@ -31,6 +31,92 @@ No tasks currently ready.
 
 ## TESTING
 
+### CTRL-006: Create publishing workflow
+
+Status: TESTING
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the publishing workflow document for the CiviCore Resource and Template Library.
+
+Scope:
+
+- Create /docs/Publishing_Workflow.md.
+- Define content workflow, status lifecycle, review rules, automation boundaries, and WordPress publishing notes.
+- Keep the work documentation-only.
+- Do not install WordPress.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- Publishing_Workflow.md exists under /docs.
+- The document includes the full content workflow from topic queue through post-publication review.
+- The document defines the content status lifecycle.
+- The document defines review rules and automation boundaries.
+- The document includes WordPress publishing notes.
+
+Implementation notes:
+
+- Created /docs/Publishing_Workflow.md.
+- Added content workflow covering topic queue, AI-assisted draft generation, human review, SEO metadata, formatting, scheduled publishing, sitemap updates, and post-publication review.
+- Added content status lifecycle from IDEA through RETIRED.
+- Added review rules for general guides, legal-adjacent templates, cautious compliance content, and avoidance of legal advice claims.
+- Added automation boundaries for AI drafting, metadata, related links, publishing limits, legal certainty limits, and direct outreach limits.
+- Added WordPress publishing notes for drafts, categories, tags, scheduled posts, slugs, and disclaimers.
+- No WordPress installation was performed.
+- No application logic was added.
+- No SheetBot files were modified.
+
+### CTRL-007: Create template disclaimer guide
+
+Status: TESTING
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Create the template disclaimer guide for the CiviCore Resource and Template Library.
+
+Scope:
+
+- Create /docs/Template_Disclaimer_Guide.md.
+- Define disclaimer patterns for general resources, legal-adjacent templates, project proposals, calculators/tools, and downloadable template packs.
+- Define placement rules and content types requiring disclaimers.
+- Keep the work documentation-only.
+- Do not install WordPress.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- Template_Disclaimer_Guide.md exists under /docs.
+- The document includes all required disclaimer types.
+- The document defines placement rules.
+- The document lists content types requiring disclaimers.
+
+Implementation notes:
+
+- Created /docs/Template_Disclaimer_Guide.md.
+- Added general disclaimer.
+- Added legal-adjacent template disclaimer.
+- Added project proposal disclaimer.
+- Added calculator/tool disclaimer.
+- Added downloadable template pack disclaimer.
+- Added placement rules for visible page placement, downloadable files, legal-adjacent template text, calculators/tools, and proposals/cost estimates.
+- Added list of content types requiring disclaimers.
+- No WordPress installation was performed.
+- No application logic was added.
+- No SheetBot files were modified.
+
+---
+
 ### CTRL-005: Create initial content strategy
 
 Status: TESTING
