@@ -71,7 +71,9 @@ Implementation notes:
 - Right-of-way agreement draft completed.
 - Water system project proposal draft completed.
 - Street lighting project proposal draft completed.
-- Remaining 4 draft resources still pending.
+- Batch 3 completed.
+- Remaining 4 draft resources completed.
+- First 10 resource drafts are now complete.
 - Empty content folders preserved using .gitkeep files.
 - No WordPress installation yet.
 - No application logic added.
