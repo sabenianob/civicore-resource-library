@@ -66,6 +66,8 @@ Implementation notes:
 
 - Content draft directory created.
 - First 10 resource draft placeholders created.
+- First 3 draft resources completed.
+- Remaining 7 draft resources still pending.
 - Empty content folders preserved using .gitkeep files.
 - No WordPress installation yet.
 - No application logic added.
