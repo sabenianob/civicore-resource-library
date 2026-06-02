@@ -50,15 +50,18 @@ This project should use its own repository, task board, documentation, deploymen
 
 ## Current Task State
 
-CTRL-001 is in TESTING.
+CTRL-001 is DONE.
 
 Implementation notes:
 
 - Initial AIOS folder structure has been created.
 - Required root documentation files are present.
 - README.md has been added.
+- Repository initialized and pushed to GitHub.
+- Empty folders preserved using .gitkeep.
 - No application logic has been created.
-- No SheetBot files were modified.
+- No SheetBot files were found or modified.
+- Commit: b85177e Initialize AIOS project structure.
 
 ---
 
@@ -79,3 +82,10 @@ Use the standard loop:
 ```text
 Define -> Review -> Reconcile -> Execute
 ```
+
+Current AIOS roles:
+
+- ChatGPT: coordinator, planner, prompt engineer, documentation generator, integration reviewer, and strategic/architecture adviser.
+- Codex: implementation assistant, repository/file editor, task executor, local/server-side code assistant, and TASKS.md updater.
+
+ChatGPT leads review and planning with the user. The user and ChatGPT reconcile approved scope. Codex implements approved task definitions and updates TASKS.md.

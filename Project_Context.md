@@ -335,15 +335,17 @@ Roles:
 
 ### ChatGPT
 
-Main coordinator, prompt engineer, planning assistant, documentation generator, integration reviewer.
-
-### Gemini
-
-Architecture reviewer, infrastructure reviewer, security reviewer, scalability reviewer.
+Coordinator, planner, prompt engineer, documentation generator, integration reviewer, and strategic/architecture adviser.
 
 ### Codex
 
-Implementation assistant with repository access, file changes, task execution, and local development support.
+Implementation assistant, repository/file editor, task executor, local/server-side code assistant, and TASKS.md updater.
+
+Workflow:
+
+1. ChatGPT leads planning, review, documentation, and strategic/architecture guidance.
+2. The user and ChatGPT reconcile scope, requirements, and approval for each task.
+3. Codex implements only approved task definitions, updates files, verifies work, and records task status in TASKS.md.
 
 ---
 

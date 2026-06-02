@@ -32,13 +32,13 @@ Define
 Clarify the purpose, scope, constraints, and expected output.
 
 Review
-Have architecture, security, infrastructure, content, or SEO concerns reviewed before implementation.
+Use ChatGPT-led review for architecture, security, infrastructure, content, SEO, documentation, and strategic concerns before implementation.
 
 Reconcile
-Resolve differences between ChatGPT, Gemini, Codex, and user instructions before execution.
+Resolve scope, requirements, and approval between the user and ChatGPT before execution.
 
 Execute
-Codex or the assigned development agent implements only the approved task.
+Codex implements only the approved task definition, updates repository files, verifies work, and records task status in TASKS.md.
 
 ## 3. Required Repository Structure
 /docs

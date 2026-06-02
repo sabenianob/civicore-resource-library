@@ -31,9 +31,49 @@ No tasks currently ready.
 
 ## TESTING
 
-### CTRL-001: Create initial AIOS project structure
+### CTRL-013: Remove Legacy Gemini References from AIOS Documentation
 
 Status: TESTING
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Gemini is no longer included in the user's active AIOS workflow. The project documentation must reflect the current ChatGPT + Codex operating model.
+
+Scope:
+
+- Search the active AIOS documentation for Gemini references.
+- Remove or revise legacy Gemini role and review language.
+- Replace review language with ChatGPT-led review, User + ChatGPT reconciliation, and Codex implementation after approved task definition.
+- Do not add application logic.
+- Do not modify SheetBot files.
+
+Acceptance criteria:
+
+- No Gemini references remain in active AIOS documentation.
+- AIOS role descriptions show ChatGPT + Codex only.
+- TASKS.md reflects CTRL-001 as DONE.
+- No application logic is added.
+- No SheetBot files are modified.
+
+Implementation notes:
+
+- Searched the repository for Gemini references.
+- Removed legacy Gemini role language from Project_Context.md.
+- Updated Engineering_Rules.md to describe ChatGPT-led review, User + ChatGPT reconciliation, and Codex execution.
+- Updated README.md and HANDOFF.md to reflect the current ChatGPT + Codex AIOS operating model.
+- No application logic was added.
+
+---
+
+## DONE
+
+### CTRL-001: Create initial AIOS project structure
+
+Status: DONE
 
 Owner: Codex
 
@@ -70,19 +110,11 @@ Acceptance criteria:
 
 Implementation notes:
 
-- Created the missing AIOS folders: /adr, /prompts, and /tasks.
-- Confirmed /docs already existed.
-- Confirmed Project_Context.md and Engineering_Rules.md already existed with starter content.
-- Normalized TASKS.md into a clean project task board.
-- Moved CTRL-001 from READY to TESTING after structure creation.
-- Added README.md for project overview and AIOS workflow reference.
-- No application logic was added.
-
----
-
-## DONE
-
-No tasks completed yet.
+- AIOS project structure created.
+- Repository initialized and pushed to GitHub.
+- Empty folders preserved using .gitkeep.
+- No SheetBot files found or modified.
+- Commit: b85177e Initialize AIOS project structure.
 
 ---
 

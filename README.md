@@ -39,4 +39,9 @@ This project follows the AI Operating System workflow:
 Define -> Review -> Reconcile -> Execute
 ```
 
-Codex should only execute scoped tasks recorded in TASKS.md and should maintain project documentation before major implementation work.
+Current AIOS roles:
+
+- ChatGPT: coordinator, planner, prompt engineer, documentation generator, integration reviewer, and strategic/architecture adviser.
+- Codex: implementation assistant, repository/file editor, task executor, local/server-side code assistant, and TASKS.md updater.
+
+ChatGPT leads review and planning with the user. The user and ChatGPT reconcile the approved task definition. Codex implements scoped tasks recorded in TASKS.md and maintains project documentation before major implementation work.
