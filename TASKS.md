@@ -25,68 +25,50 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-014: Verify Target Server for WordPress Staging
-
-Status: READY
-
-Owner: User / Codex
-
-Priority: High
-
-Context:
-
-Before installing WordPress or changing DNS/server configuration, the target DigitalOcean server must be verified.
-
-Scope:
-
-Gather server facts only. Do not modify configuration.
-
-Verification checklist:
-
-- Confirm target server name or IP.
-- Confirm whether server uses Nginx or Apache.
-- Confirm PHP version.
-- Confirm PHP-FPM status if using Nginx.
-- Confirm MySQL or MariaDB availability.
-- Confirm current hosted sites.
-- Confirm available disk space.
-- Confirm firewall status.
-- Confirm Certbot availability.
-- Confirm whether a snapshot/backup exists before changes.
-
-Suggested read-only commands:
-
-```bash
-hostname
-hostname -I
-lsb_release -a
-sudo ss -tulpn | grep -E ':80|:443'
-nginx -v 2>/dev/null || true
-apache2 -v 2>/dev/null || true
-php -v
-systemctl status php*-fpm --no-pager 2>/dev/null || true
-mysql --version
-df -h
-sudo ufw status
-certbot --version 2>/dev/null || true
-ls /etc/nginx/sites-available 2>/dev/null || true
-ls /etc/apache2/sites-available 2>/dev/null || true
-```
-
-Acceptance criteria:
-
-- Server stack is identified.
-- Existing hosted sites are identified.
-- No configuration files are modified.
-- No WordPress installation is performed.
-- Findings are recorded in TASKS.md or a new notes document.
-- No SheetBot files or server configuration are modified.
+No tasks currently ready.
 
 ---
 
 ## TESTING
 
-No tasks currently in testing.
+### CTRL-015: Prepare WordPress Staging Installation Commands
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
+
+Scope:
+
+- Create /docs/WordPress_Staging_Installation_Commands.md.
+- Group commands into careful manual execution phases.
+- Record confirmed stack details.
+- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
+- Do not execute commands.
+- Do not install WordPress.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files or config.
+
+Acceptance criteria:
+
+- WordPress_Staging_Installation_Commands.md exists under /docs.
+- Commands are clearly marked for manual execution only after review.
+- Existing civicore and sheetbot configs are explicitly protected.
+- No commands are executed as part of this documentation task.
+
+Implementation notes:
+
+- WordPress staging installation command plan created.
+- Commands prepared but not executed.
+- No WordPress installation performed.
+- No server configuration changed.
+- No SheetBot files or config modified.
 
 ---
 
@@ -97,6 +79,34 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-014: Verify Target Server for WordPress Staging
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+Before installing WordPress or changing DNS/server configuration, the target DigitalOcean server must be verified.
+
+Implementation notes:
+
+- Server verified as ccit-serv1.
+- Nginx confirmed on ports 80/443.
+- PHP 8.3-FPM confirmed active.
+- PHP-FPM socket confirmed as /run/php/php8.3-fpm.sock.
+- MySQL confirmed available.
+- Certbot confirmed available.
+- Existing civicore and sheetbot Nginx sites identified.
+- Findings recorded in /docs/Server_Verification_Report.md.
+- No WordPress installation performed.
+- No server configuration changed.
+- No SheetBot files or config modified.
+
+---
 
 Completion notes for CTRL-012 through CTRL-013:
 
