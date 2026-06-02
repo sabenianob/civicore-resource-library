@@ -25,92 +25,68 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-No tasks currently ready.
+### CTRL-014: Verify Target Server for WordPress Staging
 
----
+Status: READY
 
-## TESTING
-
-### CTRL-012: Prepare WordPress Staging Setup Checklist
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
+Owner: User / Codex
 
 Priority: High
 
 Context:
 
-Create the WordPress staging setup checklist before installing WordPress or changing server configuration.
+Before installing WordPress or changing DNS/server configuration, the target DigitalOcean server must be verified.
 
 Scope:
 
-- Create /docs/WordPress_Staging_Setup_Checklist.md.
-- Document confirmed project decisions.
-- Include pre-server verification, DNS, database, web server, WordPress installation, SSL, initial configuration, plugin, staging validation, and rollback checklist sections.
-- Do not install WordPress.
-- Do not change DNS.
-- Do not change server configuration.
-- Do not add application logic.
-- Do not modify SheetBot files.
+Gather server facts only. Do not modify configuration.
+
+Verification checklist:
+
+- Confirm target server name or IP.
+- Confirm whether server uses Nginx or Apache.
+- Confirm PHP version.
+- Confirm PHP-FPM status if using Nginx.
+- Confirm MySQL or MariaDB availability.
+- Confirm current hosted sites.
+- Confirm available disk space.
+- Confirm firewall status.
+- Confirm Certbot availability.
+- Confirm whether a snapshot/backup exists before changes.
+
+Suggested read-only commands:
+
+```bash
+hostname
+hostname -I
+lsb_release -a
+sudo ss -tulpn | grep -E ':80|:443'
+nginx -v 2>/dev/null || true
+apache2 -v 2>/dev/null || true
+php -v
+systemctl status php*-fpm --no-pager 2>/dev/null || true
+mysql --version
+df -h
+sudo ufw status
+certbot --version 2>/dev/null || true
+ls /etc/nginx/sites-available 2>/dev/null || true
+ls /etc/apache2/sites-available 2>/dev/null || true
+```
 
 Acceptance criteria:
 
-- WordPress_Staging_Setup_Checklist.md exists under /docs.
-- Checklist includes confirmed project decisions and SheetBot separation.
-- Checklist includes Nginx and Apache notes.
-- Checklist includes rollback notes.
-
-Implementation notes:
-
-- WordPress staging setup checklist created.
-- CTRL-009 through CTRL-011 moved to DONE.
-- No WordPress installation performed.
-- No server configuration changed.
-- No application logic added.
-- No SheetBot files modified.
+- Server stack is identified.
+- Existing hosted sites are identified.
+- No configuration files are modified.
+- No WordPress installation is performed.
+- Findings are recorded in TASKS.md or a new notes document.
+- No SheetBot files or server configuration are modified.
 
 ---
 
-### CTRL-013: Prepare WordPress Content Import Checklist
+## TESTING
 
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: Medium
-
-Context:
-
-Create the WordPress content import checklist and mapping document for converting repository markdown content into WordPress draft pages and posts.
-
-Scope:
-
-- Create /docs/WordPress_Content_Import_Checklist.md.
-- Map required pages to WordPress Pages.
-- Map resource drafts to WordPress Posts and recommended categories.
-- Define post import, page import, post-import validation, and publishing order checklists.
-- Keep CTRL-012 in TESTING unless reviewed and accepted.
-- Do not install WordPress.
-- Do not change server configuration.
-- Do not add application logic.
-- Do not modify SheetBot files.
-
-Acceptance criteria:
-
-- WordPress_Content_Import_Checklist.md exists under /docs.
-- Required WordPress pages are mapped.
-- First 10 resource drafts are mapped to recommended WordPress categories.
-- Import and validation checklists are included.
-- Publishing order is documented.
-
-Implementation notes:
-
-- WordPress content import checklist created.
-- No WordPress installation performed.
-- No server configuration changed.
-- No application logic added.
-- No SheetBot files modified.
+No tasks currently in testing.
 
 ---
 
@@ -121,6 +97,59 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+Completion notes for CTRL-012 through CTRL-013:
+
+- WordPress staging setup checklist created.
+- WordPress content import checklist created.
+- No WordPress installation performed.
+- No server configuration changed.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-013: Prepare WordPress Content Import Checklist
+
+Status: DONE
+
+Owner: ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Create the WordPress content import checklist and mapping document for converting repository markdown content into WordPress draft pages and posts.
+
+Implementation notes:
+
+- WordPress content import checklist created.
+- Created /docs/WordPress_Content_Import_Checklist.md.
+- No WordPress installation performed.
+- No server configuration changed.
+- No application logic added.
+- No SheetBot files modified.
+
+### CTRL-012: Prepare WordPress Staging Setup Checklist
+
+Status: DONE
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Create the WordPress staging setup checklist before installing WordPress or changing server configuration.
+
+Implementation notes:
+
+- WordPress staging setup checklist created.
+- Created /docs/WordPress_Staging_Setup_Checklist.md.
+- No WordPress installation performed.
+- No server configuration changed.
+- No application logic added.
+- No SheetBot files modified.
+
+---
 
 Completion notes for CTRL-009 through CTRL-011:
 
