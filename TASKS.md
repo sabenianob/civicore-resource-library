@@ -67,7 +67,11 @@ Implementation notes:
 - Content draft directory created.
 - First 10 resource draft placeholders created.
 - First 3 draft resources completed.
-- Remaining 7 draft resources still pending.
+- Batch 2 completed.
+- Right-of-way agreement draft completed.
+- Water system project proposal draft completed.
+- Street lighting project proposal draft completed.
+- Remaining 4 draft resources still pending.
 - Empty content folders preserved using .gitkeep files.
 - No WordPress installation yet.
 - No application logic added.
