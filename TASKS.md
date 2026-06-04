@@ -25,54 +25,7 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-021: Final Review Before Staging Publish
-
-Status: READY
-
-Owner: User / ChatGPT
-
-Priority: High
-
-Context:
-
-The WordPress staging content structure has been configured and cleanup is complete. Before publishing any pages or resource posts on staging, a final review should confirm that the site is safe, clean, and ready for staging publication.
-
-Scope:
-
-Review WordPress staging only. Do not touch production DNS. Do not modify SheetBot.
-
-Review checklist:
-
-- Staging indexing remains disabled.
-- Default WordPress content is no longer publicly visible.
-- Only the prepared CiviCore Privacy Policy draft remains.
-- Required pages are ready:
-  - Homepage
-  - About CiviCore Resources
-  - Contact
-  - Disclaimer
-  - Privacy Policy
-- First 10 resource posts are ready as drafts.
-- Categories are correctly assigned.
-- Tags are conservative and relevant.
-- Comments are disabled on resource posts.
-- Slugs match the content import checklist.
-- Disclaimers are present where needed.
-- Legal-adjacent templates remain cautious.
-- Cost estimate template includes budgeting/procurement caution.
-- No active SheetBot links.
-- No lead capture forms.
-- No AdSense.
-- No premium downloads.
-- No production DNS changes.
-
-Acceptance criteria:
-
-- Final review completed.
-- Any remaining corrections listed.
-- If no corrections are needed, staging content may proceed to controlled publishing.
-- No production changes made.
-- No SheetBot files or configuration modified.
+No ready tasks currently listed.
 
 ## TESTING
 
@@ -206,6 +159,57 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-021: Final Review Before Staging Publish
+
+Status: DONE
+
+Owner: User / ChatGPT
+
+Priority: High
+
+Context:
+
+The WordPress staging content structure has been configured and cleanup is complete. Before publishing any pages or resource posts on staging, a final review confirmed that the site is safe, clean, and ready for staging publication.
+
+Scope:
+
+Review WordPress staging only. Do not touch production DNS. Do not modify SheetBot.
+
+Implementation notes:
+
+- Final review completed.
+- Staging indexing remains disabled.
+- Default WordPress content is no longer publicly visible.
+- Only the prepared CiviCore Privacy Policy draft remains active as a draft.
+- Required pages are present as drafts: Homepage, About CiviCore Resources, Contact, Disclaimer, Privacy Policy.
+- First 10 resource posts are present as drafts.
+- Categories are correctly assigned.
+- Tags are conservative and relevant.
+- Comments are disabled on resource posts; reply forms are not visible.
+- Slug metadata matches the content import checklist.
+- Disclaimers are present where needed.
+- Legal-adjacent templates remain cautious.
+- Cost estimate template includes budgeting/procurement caution.
+- No active SheetBot links found.
+- No lead capture forms found.
+- No AdSense found.
+- No active premium downloads found.
+- No production DNS changes made.
+- No production changes made.
+- No SheetBot files or configuration modified.
+- No remaining corrections identified.
+- Staging content may proceed to controlled publishing if approved.
+
+Acceptance criteria:
+
+- Final review completed.
+- Any remaining corrections listed.
+- If no corrections are needed, staging content may proceed to controlled publishing.
+- No production changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-019: Review WordPress Staging Content
 
