@@ -25,62 +25,7 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-022: Controlled Publish on WordPress Staging
-
-Status: READY
-
-Owner: User
-
-Priority: High
-
-Context:
-
-Final staging review passed with no remaining corrections. The prepared pages and first 10 resource posts may now be published on WordPress staging for front-end testing.
-
-Scope:
-
-Publish content on WordPress staging only. Do not publish to production. Do not change production DNS. Keep staging indexing disabled.
-
-Publishing order:
-
-1. Disclaimer
-2. Privacy Policy
-3. About CiviCore Resources
-4. Contact
-5. Homepage
-6. First 10 resource posts:
-   - LGU Request Letter Template
-   - Barangay Project Proposal Template
-   - Permit to Enter Private Property Template
-   - Right-of-Way Agreement Template
-   - Water System Project Proposal Template
-   - Street Lighting Project Proposal Template
-   - Water District Website Modernization Checklist
-   - Office Digitalization Starter Guide
-   - Google Workspace Folder Structure for Small Offices
-   - Basic Project Cost Estimate Template
-
-Post-publish configuration:
-
-- Set Homepage as static front page.
-- Keep staging indexing disabled.
-- Confirm permalinks use Post name.
-- Confirm comments remain disabled on resource posts.
-- Confirm no SheetBot links are active.
-- Confirm no lead capture forms are active.
-- Confirm no AdSense is active.
-- Confirm no premium downloads are active.
-
-Acceptance criteria:
-
-- Required pages are published on staging.
-- Homepage is published and set as static front page.
-- First 10 resource posts are published on staging.
-- Front-end URLs load correctly.
-- Categories and tags display correctly.
-- Staging indexing remains disabled.
-- No production DNS changes made.
-- No SheetBot files or configuration modified.
+No ready tasks currently listed.
 
 ## TESTING
 
@@ -214,6 +159,68 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-022: Controlled Publish on WordPress Staging
+
+Status: DONE
+
+Owner: User
+
+Priority: High
+
+Context:
+
+Final staging review passed with no remaining corrections. The prepared pages and first 10 resource posts were published on WordPress staging for front-end testing.
+
+Scope:
+
+Publish content on WordPress staging only. Do not publish to production. Do not change production DNS. Keep staging indexing disabled.
+
+Implementation notes:
+
+- Published required pages on staging in controlled order:
+  - Disclaimer
+  - Privacy Policy
+  - About CiviCore Resources
+  - Contact
+  - Homepage
+- Published first 10 resource posts on staging:
+  - LGU Request Letter Template
+  - Barangay Project Proposal Template
+  - Permit to Enter Private Property Template
+  - Right-of-Way Agreement Template
+  - Water System Project Proposal Template
+  - Street Lighting Project Proposal Template
+  - Water District Website Modernization Checklist
+  - Office Digitalization Starter Guide
+  - Google Workspace Folder Structure for Small Offices
+  - Basic Project Cost Estimate Template
+- Homepage published and set as static front page.
+- Staging indexing remains disabled.
+- Permalinks confirmed as Post name.
+- Comments remain disabled on resource posts; reply forms are not visible.
+- Google Workspace post slug corrected to google-workspace-folder-structure-small-offices.
+- Front-end URLs verified for Homepage, required pages, and first 10 resource posts.
+- Categories and tags display correctly.
+- No active SheetBot links found.
+- No lead capture forms found.
+- No AdSense found.
+- No active premium downloads found.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+Acceptance criteria:
+
+- Required pages are published on staging.
+- Homepage is published and set as static front page.
+- First 10 resource posts are published on staging.
+- Front-end URLs load correctly.
+- Categories and tags display correctly.
+- Staging indexing remains disabled.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-021: Final Review Before Staging Publish
 
