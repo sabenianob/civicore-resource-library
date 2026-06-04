@@ -25,9 +25,13 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
+No tasks currently ready.
+
+## TESTING
+
 ### CTRL-018: Configure Initial WordPress Content Structure
 
-Status: READY
+Status: TESTING
 
 Owner: User / Codex
 
@@ -73,12 +77,38 @@ Acceptance criteria:
 - First 10 resource posts exist as drafts.
 - Slugs match planned URLs.
 - Staging indexing remains disabled.
+- No public publishing performed yet.
 - No production DNS changes made.
 - No SheetBot files or config modified.
 
----
+Implementation notes:
 
-## TESTING
+- WordPress staging settings confirmed.
+- Staging search engine indexing disabled.
+- Permalink structure set to Post name.
+- Timezone set to Manila or UTC+8.
+- Initial WordPress categories created:
+  - LGU Letters
+  - Project Proposal Templates
+  - Right-of-Way and Permit-to-Enter
+  - Water District Resources
+  - Office Digitalization Guides
+  - Calculators and Tools
+- Required pages created as drafts:
+  - Homepage
+  - About CiviCore Resources
+  - Contact
+  - Disclaimer
+  - Privacy Policy
+- First 10 resource posts created as drafts.
+- Slugs and categories assigned according to the content import checklist.
+- No content published yet.
+- No SheetBot links activated.
+- No lead capture activated.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
