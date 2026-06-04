@@ -25,9 +25,52 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-019: Review WordPress Staging Content
+### CTRL-020: Clean Up WordPress Staging Default Content
 
 Status: READY
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+WordPress staging content review found default WordPress content and setup items that must be cleaned before approval or publishing.
+
+Scope:
+
+Perform cleanup in WordPress staging dashboard only. Do not modify server configuration. Do not modify SheetBot.
+
+Checklist:
+
+- Trash or unpublish Hello world!.
+- Trash or unpublish Sample Page.
+- Remove the default WordPress Privacy Policy draft, keeping the prepared CiviCore Privacy Policy draft.
+- Add conservative tags to the 10 resource post drafts.
+- Disable comments on resource posts.
+- Confirm Uncategorized is no longer attached to any public/default content.
+- Keep Homepage as draft until approved.
+- Do not publish content yet unless separately approved.
+- Do not activate SheetBot links.
+- Do not activate lead capture.
+- Do not change production DNS.
+
+Acceptance criteria:
+
+- Default Hello world! post removed or unpublished.
+- Default Sample Page removed or unpublished.
+- Only the prepared CiviCore Privacy Policy draft remains.
+- Resource posts have relevant conservative tags.
+- Comments are disabled for resource posts.
+- No default WordPress public content remains visible.
+- No content published yet unless approved.
+- No SheetBot files or configuration modified.
+
+## TESTING
+
+### CTRL-019: Review WordPress Staging Content
+
+Status: TESTING
 
 Owner: Codex / ChatGPT
 
@@ -70,7 +113,35 @@ Acceptance criteria:
 - Staging indexing remains disabled.
 - No SheetBot links or lead capture are activated.
 
-## TESTING
+Implementation notes:
+
+- WordPress staging content review completed.
+- Staging indexing is disabled.
+- Permalink structure is set to /%postname%/.
+- Timezone is set to UTC+8.
+- All 10 resource posts exist as drafts.
+- Required pages exist as drafts: Homepage, About, Contact, Disclaimer, Privacy Policy.
+- Resource categories are assigned correctly.
+- Draft content has expected sections.
+- Legal-adjacent drafts include cautionary disclaimer language.
+- Cost estimate draft includes stronger cost/budget/procurement caution.
+- No active SheetBot links found.
+- No lead capture form found.
+- Staging is not ready for approval yet due to cleanup items.
+
+Issues found:
+
+- Default Hello world! post is still published.
+- Default Sample Page is still published.
+- Public homepage currently shows default blog page with Hello world!.
+- Two Privacy Policy drafts exist; one appears to be the default WordPress draft and one is the CiviCore starter draft.
+- No WordPress tags exist yet.
+- All 10 resource posts show No tags.
+- Homepage is still draft and not configured as the front page.
+- Resource previews still show comments / Leave a Reply.
+- Uncategorized remains attached to the default Hello world! post.
+
+---
 
 ### CTRL-018: Configure Initial WordPress Content Structure
 
