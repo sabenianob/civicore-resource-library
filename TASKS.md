@@ -25,7 +25,50 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-No tasks currently ready.
+### CTRL-019: Review WordPress Staging Content
+
+Status: READY
+
+Owner: Codex / ChatGPT
+
+Priority: High
+
+Context:
+
+The initial WordPress content structure has been configured in staging. Before publishing any content, the drafted pages and resource posts must be reviewed for completeness, tone, formatting, slugs, categories, disclaimers, and staging safety.
+
+Scope:
+
+Review the WordPress staging dashboard and front-end previews only. Do not publish content yet.
+
+Review checklist:
+
+- Confirm staging indexing remains disabled.
+- Review Homepage draft.
+- Review About CiviCore Resources page draft.
+- Review Contact page draft.
+- Review Disclaimer page draft.
+- Review Privacy Policy page draft.
+- Review all 10 resource post drafts.
+- Confirm categories are assigned correctly.
+- Confirm tags are conservative and relevant.
+- Confirm slugs match the content import checklist.
+- Confirm disclaimers are present where needed.
+- Confirm legal-adjacent templates do not claim legal sufficiency.
+- Confirm cost estimate template does not claim accounting, engineering, procurement, or legal authority.
+- Confirm no SheetBot links are active yet.
+- Confirm no lead capture form is active yet.
+- Confirm no production DNS changes were made.
+- Confirm no SheetBot files or configuration were modified.
+
+Acceptance criteria:
+
+- Required pages are reviewed.
+- First 10 resource posts are reviewed.
+- Any needed content corrections are listed.
+- No content is published until approved.
+- Staging indexing remains disabled.
+- No SheetBot links or lead capture are activated.
 
 ## TESTING
 
@@ -83,6 +126,7 @@ Acceptance criteria:
 
 Implementation notes:
 
+- WordPress staging content structure configured.
 - WordPress staging settings confirmed.
 - Staging search engine indexing disabled.
 - Permalink structure set to Post name.
