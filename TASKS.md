@@ -25,15 +25,9 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-No tasks currently ready.
+### CTRL-018: Configure Initial WordPress Content Structure
 
----
-
-## TESTING
-
-### CTRL-017: Install WordPress Staging Site
-
-Status: TESTING
+Status: READY
 
 Owner: User / Codex
 
@@ -41,33 +35,50 @@ Priority: High
 
 Context:
 
-Install and validate the WordPress staging site for the CiviCore Resource and Template Library.
+WordPress staging is installed and accessible. The next step is to configure the initial content structure before importing/publishing content.
+
+Scope:
+
+Configure WordPress staging only. Do not publish public content yet.
+
+Checklist:
+
+- Confirm staging indexing is disabled.
+- Set permalink structure to Post name.
+- Set timezone to Manila or UTC+8.
+- Create initial WordPress categories:
+  - LGU Letters
+  - Project Proposal Templates
+  - Right-of-Way and Permit-to-Enter
+  - Water District Resources
+  - Office Digitalization Guides
+  - Calculators and Tools
+- Create required pages as drafts:
+  - Homepage
+  - About CiviCore Resources
+  - Contact
+  - Disclaimer
+  - Privacy Policy
+- Create the first 10 resource posts as drafts using content from /content/drafts.
+- Assign correct categories and tags.
+- Set slugs according to the content import checklist.
+- Do not activate SheetBot links yet.
+- Do not activate lead capture yet.
+- Do not publish until staging review is complete.
 
 Acceptance criteria:
 
-- resources-staging.civicoreit.com loads over HTTPS.
-- WordPress dashboard is accessible.
-- Nginx config test passes.
-- Existing civicore staging site remains accessible.
-- Existing sheetbot staging site remains accessible.
-- Staging indexing is disabled in WordPress.
-- Permalink structure is set to post name.
-- Timezone is set properly.
+- Required categories exist.
+- Required pages exist as drafts.
+- First 10 resource posts exist as drafts.
+- Slugs match planned URLs.
+- Staging indexing remains disabled.
+- No production DNS changes made.
 - No SheetBot files or config modified.
 
-Implementation notes:
-
-- WordPress staging installation completed on ccit-serv1.
-- Initial database connection issue occurred because MySQL user resources_wp_user did not exist.
-- Issue was resolved by creating the MySQL user and granting privileges to resources_staging_wp.
-- User confirmed WordPress dashboard login is successful.
-- Web root used: /var/www/resources-staging.
-- Nginx config used: /etc/nginx/sites-available/resources-staging.
-- PHP-FPM socket used: /run/php/php8.3-fpm.sock.
-- Staging URL: https://resources-staging.civicoreit.com.
-- Existing civicore and sheetbot Nginx configs were not intentionally modified.
-
 ---
+
+## TESTING
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
@@ -117,6 +128,33 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-017: Install WordPress Staging Site
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+Install and validate the WordPress staging site for the CiviCore Resource and Template Library.
+
+Implementation notes:
+
+- WordPress staging installation completed on ccit-serv1.
+- Staging URL is accessible: https://resources-staging.civicoreit.com.
+- WordPress dashboard login confirmed successful.
+- Initial database connection issue was resolved by creating the missing MySQL user and granting database privileges.
+- curl tests passed.
+- Existing civicore and sheetbot sites remained accessible.
+- Web root used: /var/www/resources-staging.
+- Nginx config used: /etc/nginx/sites-available/resources-staging.
+- PHP-FPM socket used: /run/php/php8.3-fpm.sock.
+- No SheetBot files or configuration were modified.
+
+---
 
 ### CTRL-016: Prepare DNS for WordPress Staging
 
