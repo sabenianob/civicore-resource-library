@@ -25,84 +25,56 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-No ready tasks currently listed.
+### CTRL-021: Final Review Before Staging Publish
 
-## TESTING
+Status: READY
 
-### CTRL-019: Review WordPress Staging Content
-
-Status: TESTING
-
-Owner: Codex / ChatGPT
+Owner: User / ChatGPT
 
 Priority: High
 
 Context:
 
-The initial WordPress content structure has been configured in staging. Before publishing any content, the drafted pages and resource posts must be reviewed for completeness, tone, formatting, slugs, categories, disclaimers, and staging safety.
+The WordPress staging content structure has been configured and cleanup is complete. Before publishing any pages or resource posts on staging, a final review should confirm that the site is safe, clean, and ready for staging publication.
 
 Scope:
 
-Review the WordPress staging dashboard and front-end previews only. Do not publish content yet.
+Review WordPress staging only. Do not touch production DNS. Do not modify SheetBot.
 
 Review checklist:
 
-- Confirm staging indexing remains disabled.
-- Review Homepage draft.
-- Review About CiviCore Resources page draft.
-- Review Contact page draft.
-- Review Disclaimer page draft.
-- Review Privacy Policy page draft.
-- Review all 10 resource post drafts.
-- Confirm categories are assigned correctly.
-- Confirm tags are conservative and relevant.
-- Confirm slugs match the content import checklist.
-- Confirm disclaimers are present where needed.
-- Confirm legal-adjacent templates do not claim legal sufficiency.
-- Confirm cost estimate template does not claim accounting, engineering, procurement, or legal authority.
-- Confirm no SheetBot links are active yet.
-- Confirm no lead capture form is active yet.
-- Confirm no production DNS changes were made.
-- Confirm no SheetBot files or configuration were modified.
+- Staging indexing remains disabled.
+- Default WordPress content is no longer publicly visible.
+- Only the prepared CiviCore Privacy Policy draft remains.
+- Required pages are ready:
+  - Homepage
+  - About CiviCore Resources
+  - Contact
+  - Disclaimer
+  - Privacy Policy
+- First 10 resource posts are ready as drafts.
+- Categories are correctly assigned.
+- Tags are conservative and relevant.
+- Comments are disabled on resource posts.
+- Slugs match the content import checklist.
+- Disclaimers are present where needed.
+- Legal-adjacent templates remain cautious.
+- Cost estimate template includes budgeting/procurement caution.
+- No active SheetBot links.
+- No lead capture forms.
+- No AdSense.
+- No premium downloads.
+- No production DNS changes.
 
 Acceptance criteria:
 
-- Required pages are reviewed.
-- First 10 resource posts are reviewed.
-- Any needed content corrections are listed.
-- No content is published until approved.
-- Staging indexing remains disabled.
-- No SheetBot links or lead capture are activated.
+- Final review completed.
+- Any remaining corrections listed.
+- If no corrections are needed, staging content may proceed to controlled publishing.
+- No production changes made.
+- No SheetBot files or configuration modified.
 
-Implementation notes:
-
-- WordPress staging content review completed.
-- Staging indexing is disabled.
-- Permalink structure is set to /%postname%/.
-- Timezone is set to UTC+8.
-- All 10 resource posts exist as drafts.
-- Required pages exist as drafts: Homepage, About, Contact, Disclaimer, Privacy Policy.
-- Resource categories are assigned correctly.
-- Draft content has expected sections.
-- Legal-adjacent drafts include cautionary disclaimer language.
-- Cost estimate draft includes stronger cost/budget/procurement caution.
-- No active SheetBot links found.
-- No lead capture form found.
-- Staging is not ready for approval yet due to cleanup items.
-
-Issues found:
-
-- Default Hello world! post is still published.
-- Default Sample Page is still published.
-- Public homepage currently shows default blog page with Hello world!.
-- Two Privacy Policy drafts exist; one appears to be the default WordPress draft and one is the CiviCore starter draft.
-- No WordPress tags exist yet.
-- All 10 resource posts show No tags.
-- Homepage is still draft and not configured as the front page.
-- Resource previews still show comments / Leave a Reply.
-- Uncategorized remains attached to the default Hello world! post.
-
----
+## TESTING
 
 ### CTRL-018: Configure Initial WordPress Content Structure
 
@@ -234,6 +206,54 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-019: Review WordPress Staging Content
+
+Status: DONE
+
+Owner: Codex / ChatGPT
+
+Priority: High
+
+Context:
+
+The initial WordPress content structure was reviewed in staging before publishing any content. The drafted pages and resource posts were reviewed for completeness, tone, formatting, slugs, categories, disclaimers, and staging safety.
+
+Scope:
+
+Review the WordPress staging dashboard and front-end previews only. Do not publish content yet.
+
+Implementation notes:
+
+- Staging content review completed.
+- Staging indexing is disabled.
+- Permalink structure is set to /%postname%/.
+- Timezone is set to UTC+8.
+- All 10 resource posts exist as drafts.
+- Required pages exist as drafts: Homepage, About, Contact, Disclaimer, Privacy Policy.
+- Resource categories are assigned correctly.
+- Draft content has expected sections.
+- Legal-adjacent drafts include cautionary disclaimer language.
+- Cost estimate draft includes stronger cost/budget/procurement caution.
+- Cleanup issues were identified and resolved under CTRL-020.
+- Default WordPress public content removed.
+- Duplicate/default Privacy Policy draft removed.
+- Tags added to all 10 resource drafts.
+- Comments disabled on all 10 resource drafts.
+- No active SheetBot links found or activated.
+- No lead capture form found or activated.
+- No content published yet.
+
+Acceptance criteria:
+
+- Required pages are reviewed.
+- First 10 resource posts are reviewed.
+- Any needed content corrections are listed.
+- No content is published until approved.
+- Staging indexing remains disabled.
+- No SheetBot links or lead capture are activated.
+
+---
 
 ### CTRL-020: Clean Up WordPress Staging Default Content
 
