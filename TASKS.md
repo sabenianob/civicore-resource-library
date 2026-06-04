@@ -25,46 +25,7 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-020: Clean Up WordPress Staging Default Content
-
-Status: READY
-
-Owner: User / Codex
-
-Priority: High
-
-Context:
-
-WordPress staging content review found default WordPress content and setup items that must be cleaned before approval or publishing.
-
-Scope:
-
-Perform cleanup in WordPress staging dashboard only. Do not modify server configuration. Do not modify SheetBot.
-
-Checklist:
-
-- Trash or unpublish Hello world!.
-- Trash or unpublish Sample Page.
-- Remove the default WordPress Privacy Policy draft, keeping the prepared CiviCore Privacy Policy draft.
-- Add conservative tags to the 10 resource post drafts.
-- Disable comments on resource posts.
-- Confirm Uncategorized is no longer attached to any public/default content.
-- Keep Homepage as draft until approved.
-- Do not publish content yet unless separately approved.
-- Do not activate SheetBot links.
-- Do not activate lead capture.
-- Do not change production DNS.
-
-Acceptance criteria:
-
-- Default Hello world! post removed or unpublished.
-- Default Sample Page removed or unpublished.
-- Only the prepared CiviCore Privacy Policy draft remains.
-- Resource posts have relevant conservative tags.
-- Comments are disabled for resource posts.
-- No default WordPress public content remains visible.
-- No content published yet unless approved.
-- No SheetBot files or configuration modified.
+No ready tasks currently listed.
 
 ## TESTING
 
@@ -273,6 +234,52 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-020: Clean Up WordPress Staging Default Content
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+WordPress staging content review found default WordPress content and setup items that needed cleanup before approval or publishing.
+
+Scope:
+
+Perform cleanup in WordPress staging dashboard only. Do not modify server configuration. Do not modify SheetBot.
+
+Implementation notes:
+
+- Default Hello world! post moved to Trash.
+- Default Sample Page moved to Trash.
+- Default WordPress Privacy Policy draft moved to Trash.
+- Prepared CiviCore Privacy Policy draft retained.
+- Conservative tags added to all 10 resource post drafts.
+- Comments disabled on the 10 resource post drafts.
+- Uncategorized no longer has public/default content attached.
+- Homepage remains draft and is not configured as the front page yet.
+- No content was published.
+- No active SheetBot links found or activated.
+- No lead capture form found or activated.
+- No production DNS changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Acceptance criteria:
+
+- Default Hello world! post removed or unpublished.
+- Default Sample Page removed or unpublished.
+- Only the prepared CiviCore Privacy Policy draft remains.
+- Resource posts have relevant conservative tags.
+- Comments are disabled for resource posts.
+- No default WordPress public content remains visible.
+- No content published yet unless approved.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-017: Install WordPress Staging Site
 
