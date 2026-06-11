@@ -46,56 +46,7 @@ Important correction:
 
 ## READY
 
-### CTRL-029: Execute Production WordPress Installation
-
-Status: READY
-
-Owner: User
-
-Priority: High
-
-Context:
-
-Production backup and DNS readiness have been confirmed. The next step is to execute the reviewed production WordPress installation commands on ccit-prod-1 for resources.civicoreit.com.
-
-Scope:
-
-Install an isolated production WordPress site on ccit-prod-1 using the prepared production structure. Do not modify existing CiviCore or SheetBot configurations except by adding a separate resources-production Nginx server block.
-
-Execution plan:
-
-- Use /docs/Production_WordPress_Installation_Commands.md.
-- Create separate web root:
-  - /var/www/resources-production
-- Create separate database:
-  - resources_production_wp
-- Create separate database user:
-  - resources_prod_wp_user
-- Create separate Nginx config:
-  - /etc/nginx/sites-available/resources-production
-- Use production domain:
-  - resources.civicoreit.com
-- DNS target:
-  - resources.civicoreit.com -> 159.89.206.141
-- Issue SSL only after DNS resolves.
-- Keep production noindex until final validation is complete.
-- Validate existing live sites after installation:
-  - https://civicoreit.com/
-  - https://sheetbot.civicoreit.com/
-
-Acceptance Criteria:
-
-- Production WordPress installed in isolated web root.
-- Production database and user created separately.
-- Production Nginx server block created separately.
-- resources.civicoreit.com loads over HTTPS.
-- WordPress dashboard is accessible.
-- Production remains noindex until final approval.
-- Existing CiviCore official site remains accessible.
-- Existing SheetBot beta remains accessible.
-- No SheetBot files or configuration modified.
-
----
+No ready tasks currently listed.
 
 ## TESTING
 
@@ -149,6 +100,89 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-029: Execute Production WordPress Installation
+
+Status: DONE
+
+Owner: User
+
+Priority: High
+
+Context:
+
+Production backup and DNS readiness have been confirmed. The next step is to execute the reviewed production WordPress installation commands on ccit-prod-1 for resources.civicoreit.com.
+
+Scope:
+
+Install an isolated production WordPress site on ccit-prod-1 using the prepared production structure. Do not modify existing CiviCore or SheetBot configurations except by adding a separate resources-production Nginx server block.
+
+Execution plan:
+
+- Use /docs/Production_WordPress_Installation_Commands.md.
+- Create separate web root:
+  - /var/www/resources-production
+- Create separate database:
+  - resources_production_wp
+- Create separate database user:
+  - resources_prod_wp_user
+- Create separate Nginx config:
+  - /etc/nginx/sites-available/resources-production
+- Use production domain:
+  - resources.civicoreit.com
+- DNS target:
+  - resources.civicoreit.com -> 159.89.206.141
+- Issue SSL only after DNS resolves.
+- Keep production noindex until final validation is complete.
+- Validate existing live sites after installation:
+  - https://civicoreit.com/
+  - https://sheetbot.civicoreit.com/
+
+Acceptance Criteria:
+
+- Production WordPress installed in isolated web root.
+- Production database and user created separately.
+- Production Nginx server block created separately.
+- resources.civicoreit.com loads over HTTPS.
+- WordPress dashboard is accessible.
+- Production remains noindex until final approval.
+- Existing CiviCore official site remains accessible.
+- Existing SheetBot beta remains accessible.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Production WordPress installed on ccit-prod-1 in isolated web root:
+  - /var/www/resources-production
+- Production database created separately:
+  - resources_production_wp
+- Production database user created separately:
+  - resources_prod_wp_user
+- Production Nginx server block created separately:
+  - /etc/nginx/sites-available/resources-production
+- Production Nginx enabled symlink created:
+  - /etc/nginx/sites-enabled/resources-production
+- Production DNS resolved to the production server:
+  - resources.civicoreit.com -> 159.89.206.141
+- SSL certificate issued for resources.civicoreit.com.
+- resources.civicoreit.com loads over HTTPS.
+- WordPress login page is accessible.
+- Production WordPress noindex remains enabled.
+- Timezone set to Asia/Manila.
+- Permalink structure set to /%postname%/.
+- Production credentials generated on the server and stored outside GitHub:
+  - /root/resources-production.credentials
+- Credentials file permission confirmed as root-only.
+- Nginx config test passed after installation.
+- Existing CiviCore official site confirmed reachable:
+  - https://civicoreit.com/
+- Existing SheetBot beta confirmed reachable:
+  - https://sheetbot.civicoreit.com/
+- No existing CiviCore Nginx config intentionally modified.
+- No existing SheetBot Nginx config intentionally modified.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-028: Confirm Production Backup and DNS Readiness
 
