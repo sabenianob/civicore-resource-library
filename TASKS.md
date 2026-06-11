@@ -46,7 +46,88 @@ Important correction:
 
 ## READY
 
-No ready tasks currently listed.
+### CTRL-030: Import Staging Content to Production WordPress
+
+Status: READY
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+Production WordPress is installed and accessible at https://resources.civicoreit.com. The next step is to migrate the approved staging content into the production WordPress site while keeping production noindex/nofollow enabled until final launch approval.
+
+Scope:
+
+Import approved content from staging WordPress to production WordPress. Do not remove noindex/nofollow. Do not activate SheetBot links, lead capture, AdSense, or premium downloads.
+
+Recommended migration method:
+
+- Use WordPress export/import from staging to production.
+- Fallback to manual copy if formatting issues occur.
+
+Content to migrate:
+
+Required pages:
+
+- Homepage
+- About CiviCore Resources
+- Contact
+- Disclaimer
+- Privacy Policy
+
+First 10 resource posts:
+
+- LGU Request Letter Template
+- Barangay Project Proposal Template
+- Permit to Enter Private Property Template
+- Right-of-Way Agreement Template
+- Water System Project Proposal Template
+- Street Lighting Project Proposal Template
+- Water District Website Modernization Checklist
+- Office Digitalization Starter Guide
+- Google Workspace Folder Structure for Small Offices
+- Basic Project Cost Estimate Template
+
+Production configuration checklist:
+
+- Keep production noindex/nofollow enabled.
+- Confirm permalink structure remains /%postname%/.
+- Confirm timezone remains Asia/Manila.
+- Create or verify categories.
+- Create or verify tags.
+- Import required pages.
+- Import first 10 posts.
+- Set Homepage as static front page.
+- Configure navigation:
+  - Home
+  - About
+  - Resources
+  - Disclaimer
+  - Contact
+- Confirm footer/demo links are removed or replaced.
+- Confirm comments are disabled on resource posts.
+- Confirm no SheetBot links are active.
+- Confirm no lead capture forms are active.
+- Confirm no AdSense is active.
+- Confirm no premium downloads are active.
+
+Acceptance Criteria:
+
+- Required pages exist on production.
+- First 10 resource posts exist on production.
+- Homepage is set as static front page.
+- Slugs match staging-approved URLs.
+- Categories and tags are present.
+- Navigation and footer are clean.
+- Production noindex/nofollow remains enabled.
+- No SheetBot links, lead capture, AdSense, or premium downloads activated.
+- Existing https://civicoreit.com/ remains working.
+- Existing https://sheetbot.civicoreit.com/ remains working.
+- No SheetBot files or configuration modified.
+
+---
 
 ## TESTING
 
@@ -152,28 +233,28 @@ Acceptance Criteria:
 
 Completion notes:
 
-- Production WordPress installed on ccit-prod-1 in isolated web root:
-  - /var/www/resources-production
-- Production database created separately:
-  - resources_production_wp
-- Production database user created separately:
-  - resources_prod_wp_user
-- Production Nginx server block created separately:
-  - /etc/nginx/sites-available/resources-production
+- Production WordPress installed at https://resources.civicoreit.com.
+- Isolated web root used: /var/www/resources-production.
+- Separate database created: resources_production_wp.
+- Separate database user created: resources_prod_wp_user.
+- Separate Nginx config created: /etc/nginx/sites-available/resources-production.
 - Production Nginx enabled symlink created:
   - /etc/nginx/sites-enabled/resources-production
 - Production DNS resolved to the production server:
   - resources.civicoreit.com -> 159.89.206.141
-- SSL certificate issued for resources.civicoreit.com.
-- resources.civicoreit.com loads over HTTPS.
-- WordPress login page is accessible.
-- Production WordPress noindex remains enabled.
+- SSL issued and active.
+- WordPress login page accessible.
+- Production noindex/nofollow remains enabled.
 - Timezone set to Asia/Manila.
 - Permalink structure set to /%postname%/.
+- https://resources.civicoreit.com returns 200.
+- https://resources.civicoreit.com/wp-login.php returns 200.
+- https://civicoreit.com/ returns 200.
+- https://sheetbot.civicoreit.com/ returns 200.
+- Nginx config test passes.
 - Production credentials generated on the server and stored outside GitHub:
   - /root/resources-production.credentials
-- Credentials file permission confirmed as root-only.
-- Nginx config test passed after installation.
+- No credentials committed to GitHub.
 - Existing CiviCore official site confirmed reachable:
   - https://civicoreit.com/
 - Existing SheetBot beta confirmed reachable:
