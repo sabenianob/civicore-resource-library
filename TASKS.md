@@ -46,7 +46,52 @@ Important correction:
 
 ## READY
 
-No ready tasks currently listed.
+### CTRL-028: Confirm Production Backup and DNS Readiness
+
+Status: READY
+
+Owner: User
+
+Priority: High
+
+Context:
+
+Before executing production installation commands on ccit-prod-1, backup readiness and DNS control must be confirmed. The production server hosts both the official CiviCore website and SheetBot beta, so no production work should proceed without a recovery point.
+
+Scope:
+
+Confirm readiness only. Do not install WordPress. Do not change DNS. Do not modify server configuration.
+
+Checklist:
+
+- DigitalOcean snapshot of ccit-prod-1 is created or a recent backup is confirmed.
+- Existing CiviCore website remains reachable:
+  - https://civicoreit.com/
+- Existing SheetBot beta remains reachable:
+  - https://sheetbot.civicoreit.com/
+- DNS control for civicoreit.com is confirmed.
+- Production DNS record is not yet changed.
+- Strong production database password is generated and stored securely outside GitHub.
+- WordPress production admin username and password plan is prepared.
+- Staging site remains available:
+  - https://resources-staging.civicoreit.com
+- Staging content export method is confirmed:
+  - WordPress export/import, or
+  - manual content copy if export/import causes formatting issues.
+- Production install commands have been reviewed.
+- Rollback notes have been reviewed.
+
+Acceptance Criteria:
+
+- Snapshot or backup confirmed before production work.
+- DNS control confirmed.
+- Credentials prepared but not committed.
+- No production DNS changes made yet.
+- No production installation performed yet.
+- No server configuration changed yet.
+- No SheetBot files or configuration modified.
+
+---
 
 ## TESTING
 
@@ -93,9 +138,17 @@ Implementation notes:
 
 ---
 
+## BACKLOG
+
+No backlog tasks currently listed.
+
+---
+
+## DONE
+
 ### CTRL-027: Prepare Production WordPress Installation Commands
 
-Status: TESTING
+Status: DONE
 
 Owner: ChatGPT / Codex
 
@@ -132,23 +185,22 @@ Acceptance criteria:
 Implementation notes:
 
 - Production WordPress installation command plan created.
-- Commands prepared but not executed.
-- Separate production web root, database, database user, and Nginx config documented.
-- Production DNS target documented as resources.civicoreit.com -> 159.89.206.141.
+- Separate production structure documented:
+  - Web root: /var/www/resources-production
+  - Database: resources_production_wp
+  - Database user: resources_prod_wp_user
+  - Nginx config: /etc/nginx/sites-available/resources-production
+  - Domain: resources.civicoreit.com
+- Production DNS target documented:
+  - resources.civicoreit.com -> 159.89.206.141
+- Database password was not committed.
+- Placeholder <SECURE_PRODUCTION_DB_PASSWORD> used.
 - No production DNS changes made.
 - No production WordPress installation performed.
-- No server configuration changed.
+- No production server configuration changed.
 - No SheetBot files or configuration modified.
 
 ---
-
-## BACKLOG
-
-No backlog tasks currently listed.
-
----
-
-## DONE
 
 ### CTRL-026: Prepare Production Deployment Plan
 
