@@ -25,69 +25,7 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-024: Clean Up WordPress Staging Presentation
-
-Status: READY
-
-Owner: User / Codex
-
-Priority: High
-
-Context:
-
-WordPress staging front-end QA passed functionally, but presentation cleanup is needed before production-readiness planning.
-
-Scope:
-
-Clean up public-facing WordPress staging presentation only. Do not change production DNS. Do not modify SheetBot.
-
-Cleanup checklist:
-
-- Remove internal metadata from public page/post body content:
-  - Status: DRAFT
-  - Slug
-  - Meta Title
-  - Meta Description
-  - Tags
-- Keep useful public-facing headings and content.
-- Keep disclaimers visible where needed.
-- Remove or replace default theme/footer demo links:
-  - Blog
-  - FAQs
-  - Authors
-  - Events
-  - Shop
-  - Patterns
-  - Themes
-- Configure the main navigation for the resource library.
-- Recommended navigation:
-  - Home
-  - About
-  - Resources
-  - Disclaimer
-  - Contact
-- Resolve About URL behavior:
-  - Preferred public URL: /about/
-  - Page title may remain About CiviCore Resources.
-- Confirm resource posts keep clean slugs.
-- Confirm category/tag pages still work.
-- Keep staging indexing disabled.
-- Do not activate SheetBot links.
-- Do not activate lead capture.
-- Do not activate AdSense.
-- Do not activate premium downloads.
-
-Acceptance criteria:
-
-- Public pages/posts no longer display internal draft metadata.
-- Footer/header no longer show irrelevant default demo links.
-- Main navigation reflects CiviCore Resource Library structure.
-- /about/ works as the intended About page URL.
-- Resource post formatting remains clean.
-- Disclaimers remain visible where needed.
-- Staging indexing remains disabled.
-- No production DNS changes made.
-- No SheetBot files or configuration modified.
+No ready tasks currently listed.
 
 ## TESTING
 
@@ -141,6 +79,68 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-024: Clean Up WordPress Staging Presentation
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+WordPress staging front-end QA passed functionally, but presentation cleanup was needed before production-readiness planning.
+
+Scope:
+
+Clean up public-facing WordPress staging presentation only. Do not change production DNS. Do not modify SheetBot.
+
+Implementation notes:
+
+- Removed internal metadata from public resource post body content:
+  - Status: DRAFT
+  - Slug
+  - Meta Title
+  - Meta Description
+  - Tags
+- Removed duplicate body-level resource titles where WordPress already renders the public title.
+- Kept useful public-facing headings and resource content.
+- Kept disclaimers visible where needed.
+- Confirmed legal-adjacent template cautions remain visible.
+- Confirmed the cost estimate budgeting/procurement caution remains visible.
+- Replaced default theme navigation with focused links:
+  - Home
+  - About
+  - Resources
+  - Disclaimer
+  - Contact
+- Replaced default footer/demo links with CiviCore Resource Library footer content and approved navigation links.
+- Added a Resources anchor to the homepage Browse by Category section.
+- Updated the About page slug so /about/ works as the intended public About page URL.
+- Confirmed resource posts keep clean slugs.
+- Confirmed category and tag pages still work.
+- Confirmed staging pages still include public noindex, nofollow robots meta.
+- Confirmed no active SheetBot links.
+- Confirmed no active lead capture.
+- Confirmed no AdSense.
+- Confirmed no active premium downloads.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+Acceptance criteria:
+
+- Public pages/posts no longer display internal draft metadata.
+- Footer/header no longer show irrelevant default demo links.
+- Main navigation reflects CiviCore Resource Library structure.
+- /about/ works as the intended About page URL.
+- Resource post formatting remains clean.
+- Disclaimers remain visible where needed.
+- Staging indexing remains disabled.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-023: Perform WordPress Staging Front-End QA
 
