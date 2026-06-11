@@ -46,7 +46,77 @@ Important correction:
 
 ## READY
 
-No ready tasks currently listed.
+### CTRL-031: Perform Production Front-End QA
+
+Status: READY
+
+Owner: User / ChatGPT
+
+Priority: High
+
+Context:
+
+Production WordPress is installed and approved content has been imported and published at https://resources.civicoreit.com. Production remains noindex/nofollow. A final front-end QA pass is required before public indexing is enabled.
+
+Scope:
+
+Review the production front-end only. Do not remove noindex/nofollow yet. Do not activate monetization or lead capture.
+
+QA checklist:
+
+- Homepage loads correctly.
+- Homepage is set as static front page.
+- Main navigation works:
+  - Home
+  - About
+  - Resources
+  - Disclaimer
+  - Contact
+- Required pages load:
+  - /about/
+  - /contact/
+  - /disclaimer/
+  - /privacy-policy/
+- First 10 resource post URLs load:
+  - /lgu-request-letter-template/
+  - /barangay-project-proposal-template/
+  - /permit-to-enter-private-property-template/
+  - /right-of-way-agreement-template/
+  - /water-system-project-proposal-template/
+  - /street-lighting-project-proposal-template/
+  - /water-district-website-modernization-checklist/
+  - /office-digitalization-starter-guide/
+  - /google-workspace-folder-structure-small-offices/
+  - /basic-project-cost-estimate-template/
+- Category archive pages load.
+- Tag archive pages load.
+- Resource formatting is clean.
+- Internal draft metadata is not visible.
+- Duplicate body-level titles are not visible.
+- Disclaimers display clearly where needed.
+- Legal-adjacent templates remain cautious.
+- Cost estimate template includes budgeting/procurement caution.
+- Comments are not visible on resource posts.
+- Navigation and footer are clean.
+- Mobile view works without horizontal overflow.
+- Production noindex/nofollow remains enabled during QA.
+- No SheetBot links are active.
+- No lead capture forms are active.
+- No AdSense is active.
+- No premium downloads are active.
+- Existing https://civicoreit.com/ remains working.
+- Existing https://sheetbot.civicoreit.com/ remains working.
+- No production server config changes are needed.
+
+Acceptance Criteria:
+
+- Production front-end QA completed.
+- Any issues are listed.
+- If no blocking issues are found, project may proceed to launch indexing approval.
+- Production remains noindex/nofollow until explicit approval.
+- No SheetBot files or configuration modified.
+
+---
 
 ## TESTING
 
@@ -184,47 +254,25 @@ Acceptance Criteria:
 
 Completion notes:
 
-- Production database backup created before import:
-  - /root/resources-production-pre-import-2026-06-11-162817.sql
-- Approved staging content exported and imported into production WordPress.
-- Default production WordPress content removed before import:
-  - Hello world!
-  - Sample Page
-  - Default Privacy Policy draft
-- Required pages imported and published on production:
-  - Homepage
-  - About CiviCore Resources
-  - Contact
-  - Disclaimer
-  - Privacy Policy
+- Production content import completed.
+- Required pages imported and published.
 - First 10 resource posts imported and published on production.
 - Homepage set as static front page.
-- Slugs match staging-approved URLs.
 - Categories and tags are present.
-- Navigation imported with:
-  - Home
-  - About
-  - Resources
-  - Disclaimer
-  - Contact
+- Navigation imported: Home, About, Resources, Disclaimer, Contact.
 - Footer template part imported from staging.
 - Comments disabled on resource posts.
 - Production noindex/nofollow remains enabled.
-- Permalink structure remains /%postname%/.
+- Permalinks remain /%postname%/.
 - Timezone remains Asia/Manila.
-- No active SheetBot links found.
-- Future SheetBot placeholder text remains non-active.
-- No lead capture forms activated.
-- No AdSense activated.
-- No premium downloads activated.
+- No active SheetBot links, lead capture, AdSense, or premium downloads activated.
 - https://resources.civicoreit.com returns 200.
-- Required page URLs return 200.
+- Required pages return 200.
 - First 10 resource post URLs return 200.
-- Category and tag URLs sampled and return 200.
+- Sample category/tag URLs return 200.
 - Existing https://civicoreit.com/ remains working.
 - Existing https://sheetbot.civicoreit.com/ remains working.
 - Nginx config test passes.
-- Temporary import files and WP-CLI files removed from staging and production.
 - No SheetBot files or configuration modified.
 
 ---
