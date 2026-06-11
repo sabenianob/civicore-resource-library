@@ -25,31 +25,33 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-024: Clean Up WordPress Staging Front-End Presentation
+### CTRL-024: Clean Up WordPress Staging Presentation
 
 Status: READY
 
 Owner: User / Codex
 
-Priority: Medium
+Priority: High
 
 Context:
 
-WordPress staging front-end QA found non-blocking presentation cleanup items after the first staging publication.
+WordPress staging front-end QA passed functionally, but presentation cleanup is needed before production-readiness planning.
 
 Scope:
 
-Clean up WordPress staging presentation only. Do not change production DNS. Do not modify SheetBot.
+Clean up public-facing WordPress staging presentation only. Do not change production DNS. Do not modify SheetBot.
 
 Cleanup checklist:
 
-- Remove or hide visible internal metadata from published public pages/posts:
+- Remove internal metadata from public page/post body content:
   - Status: DRAFT
-  - Category metadata lines inside the content body, if redundant
-  - Slug metadata lines
-  - Meta Title and Meta Description metadata lines
-  - Tags metadata lines inside the content body, if redundant
-- Replace or remove default theme/footer navigation links:
+  - Slug
+  - Meta Title
+  - Meta Description
+  - Tags
+- Keep useful public-facing headings and content.
+- Keep disclaimers visible where needed.
+- Remove or replace default theme/footer demo links:
   - Blog
   - FAQs
   - Authors
@@ -57,17 +59,33 @@ Cleanup checklist:
   - Shop
   - Patterns
   - Themes
-- Ensure the public navigation focuses on approved pages and resource browsing.
+- Configure the main navigation for the resource library.
+- Recommended navigation:
+  - Home
+  - About
+  - Resources
+  - Disclaimer
+  - Contact
+- Resolve About URL behavior:
+  - Preferred public URL: /about/
+  - Page title may remain About CiviCore Resources.
+- Confirm resource posts keep clean slugs.
+- Confirm category/tag pages still work.
 - Keep staging indexing disabled.
 - Do not activate SheetBot links.
-- Do not activate lead capture forms.
-- Do not activate AdSense or premium downloads.
+- Do not activate lead capture.
+- Do not activate AdSense.
+- Do not activate premium downloads.
 
 Acceptance criteria:
 
-- Internal draft metadata is not shown to public visitors.
-- Default theme/demo navigation links are removed or replaced.
-- Public navigation is cleaner and appropriate for staging review.
+- Public pages/posts no longer display internal draft metadata.
+- Footer/header no longer show irrelevant default demo links.
+- Main navigation reflects CiviCore Resource Library structure.
+- /about/ works as the intended About page URL.
+- Resource post formatting remains clean.
+- Disclaimers remain visible where needed.
+- Staging indexing remains disabled.
 - No production DNS changes made.
 - No SheetBot files or configuration modified.
 
@@ -143,6 +161,7 @@ Review the public-facing staging website only. Do not change production DNS. Do 
 Implementation notes:
 
 - Front-end QA completed on WordPress staging.
+- No blocking functionality issues found.
 - Homepage loads correctly.
 - Homepage is set as the static front page.
 - Required pages load:
@@ -167,6 +186,8 @@ Implementation notes:
 - Staging pages include public noindex, nofollow robots meta.
 - Existing civicore staging site remained reachable.
 - Existing sheetbot staging site remained reachable.
+- No SheetBot links, lead capture forms, AdSense, premium downloads, production DNS changes, or SheetBot changes found.
+- Presentation cleanup is still required before production-readiness planning.
 - No production DNS changes made.
 - No SheetBot files or configuration modified.
 
