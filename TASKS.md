@@ -46,9 +46,64 @@ Important correction:
 
 ## READY
 
+No ready tasks currently listed.
+
+## TESTING
+
+---
+
+### CTRL-015: Prepare WordPress Staging Installation Commands
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
+
+Scope:
+
+- Create /docs/WordPress_Staging_Installation_Commands.md.
+- Group commands into careful manual execution phases.
+- Record confirmed stack details.
+- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
+- Do not execute commands.
+- Do not install WordPress.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files or config.
+
+Acceptance criteria:
+
+- WordPress_Staging_Installation_Commands.md exists under /docs.
+- Commands are clearly marked for manual execution only after review.
+- Existing civicore and sheetbot configs are explicitly protected.
+- No commands are executed as part of this documentation task.
+
+Implementation notes:
+
+- WordPress staging installation command plan created.
+- Commands prepared but not executed.
+- No WordPress installation performed.
+- No server configuration changed.
+- No SheetBot files or config modified.
+
+---
+
+## BACKLOG
+
+No backlog tasks currently listed.
+
+---
+
+## DONE
+
 ### CTRL-030: Import Staging Content to Production WordPress
 
-Status: READY
+Status: DONE
 
 Owner: User / Codex
 
@@ -127,60 +182,52 @@ Acceptance Criteria:
 - Existing https://sheetbot.civicoreit.com/ remains working.
 - No SheetBot files or configuration modified.
 
----
+Completion notes:
 
-## TESTING
-
----
-
-### CTRL-015: Prepare WordPress Staging Installation Commands
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: High
-
-Context:
-
-Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
-
-Scope:
-
-- Create /docs/WordPress_Staging_Installation_Commands.md.
-- Group commands into careful manual execution phases.
-- Record confirmed stack details.
-- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
-- Do not execute commands.
-- Do not install WordPress.
-- Do not change server configuration.
-- Do not add application logic.
-- Do not modify SheetBot files or config.
-
-Acceptance criteria:
-
-- WordPress_Staging_Installation_Commands.md exists under /docs.
-- Commands are clearly marked for manual execution only after review.
-- Existing civicore and sheetbot configs are explicitly protected.
-- No commands are executed as part of this documentation task.
-
-Implementation notes:
-
-- WordPress staging installation command plan created.
-- Commands prepared but not executed.
-- No WordPress installation performed.
-- No server configuration changed.
-- No SheetBot files or config modified.
-
----
-
-## BACKLOG
-
-No backlog tasks currently listed.
+- Production database backup created before import:
+  - /root/resources-production-pre-import-2026-06-11-162817.sql
+- Approved staging content exported and imported into production WordPress.
+- Default production WordPress content removed before import:
+  - Hello world!
+  - Sample Page
+  - Default Privacy Policy draft
+- Required pages imported and published on production:
+  - Homepage
+  - About CiviCore Resources
+  - Contact
+  - Disclaimer
+  - Privacy Policy
+- First 10 resource posts imported and published on production.
+- Homepage set as static front page.
+- Slugs match staging-approved URLs.
+- Categories and tags are present.
+- Navigation imported with:
+  - Home
+  - About
+  - Resources
+  - Disclaimer
+  - Contact
+- Footer template part imported from staging.
+- Comments disabled on resource posts.
+- Production noindex/nofollow remains enabled.
+- Permalink structure remains /%postname%/.
+- Timezone remains Asia/Manila.
+- No active SheetBot links found.
+- Future SheetBot placeholder text remains non-active.
+- No lead capture forms activated.
+- No AdSense activated.
+- No premium downloads activated.
+- https://resources.civicoreit.com returns 200.
+- Required page URLs return 200.
+- First 10 resource post URLs return 200.
+- Category and tag URLs sampled and return 200.
+- Existing https://civicoreit.com/ remains working.
+- Existing https://sheetbot.civicoreit.com/ remains working.
+- Nginx config test passes.
+- Temporary import files and WP-CLI files removed from staging and production.
+- No SheetBot files or configuration modified.
 
 ---
-
-## DONE
 
 ### CTRL-029: Execute Production WordPress Installation
 
