@@ -25,89 +25,58 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-No ready tasks currently listed.
+### CTRL-023: Perform WordPress Staging Front-End QA
 
-## TESTING
+Status: READY
 
-### CTRL-018: Configure Initial WordPress Content Structure
-
-Status: TESTING
-
-Owner: User / Codex
+Owner: User / ChatGPT
 
 Priority: High
 
 Context:
 
-WordPress staging is installed and accessible. The next step is to configure the initial content structure before importing/publishing content.
+The first staging publication is complete. The required pages, homepage, and first 10 resource posts are now published on WordPress staging. A front-end QA pass is needed before considering production preparation.
 
 Scope:
 
-Configure WordPress staging only. Do not publish public content yet.
+Review the public-facing staging website only. Do not change production DNS. Do not modify SheetBot.
 
-Checklist:
+QA checklist:
 
-- Confirm staging indexing is disabled.
-- Set permalink structure to Post name.
-- Set timezone to Manila or UTC+8.
-- Create initial WordPress categories:
-  - LGU Letters
-  - Project Proposal Templates
-  - Right-of-Way and Permit-to-Enter
-  - Water District Resources
-  - Office Digitalization Guides
-  - Calculators and Tools
-- Create required pages as drafts:
-  - Homepage
-  - About CiviCore Resources
-  - Contact
-  - Disclaimer
-  - Privacy Policy
-- Create the first 10 resource posts as drafts using content from /content/drafts.
-- Assign correct categories and tags.
-- Set slugs according to the content import checklist.
-- Do not activate SheetBot links yet.
-- Do not activate lead capture yet.
-- Do not publish until staging review is complete.
+- Homepage loads correctly.
+- Homepage is set as the static front page.
+- Main navigation works.
+- Required pages load:
+  - /about/
+  - /contact/
+  - /disclaimer/
+  - /privacy-policy/
+- First 10 resource post URLs load correctly.
+- Google Workspace post uses /google-workspace-folder-structure-small-offices/.
+- Category archive pages load correctly.
+- Tags display appropriately.
+- Resource pages have clean formatting.
+- Disclaimers display clearly where needed.
+- Legal-adjacent templates remain cautious.
+- Cost estimate template includes budgeting/procurement caution.
+- Comments are not visible on resource posts.
+- No default WordPress content appears.
+- No SheetBot links are active.
+- No lead capture forms are active.
+- No AdSense or premium downloads are active.
+- Site is usable on mobile view.
+- Staging indexing remains disabled.
+- Existing civicore and sheetbot staging sites remain unaffected.
 
 Acceptance criteria:
 
-- Required categories exist.
-- Required pages exist as drafts.
-- First 10 resource posts exist as drafts.
-- Slugs match planned URLs.
-- Staging indexing remains disabled.
-- No public publishing performed yet.
-- No production DNS changes made.
-- No SheetBot files or config modified.
-
-Implementation notes:
-
-- WordPress staging content structure configured.
-- WordPress staging settings confirmed.
-- Staging search engine indexing disabled.
-- Permalink structure set to Post name.
-- Timezone set to Manila or UTC+8.
-- Initial WordPress categories created:
-  - LGU Letters
-  - Project Proposal Templates
-  - Right-of-Way and Permit-to-Enter
-  - Water District Resources
-  - Office Digitalization Guides
-  - Calculators and Tools
-- Required pages created as drafts:
-  - Homepage
-  - About CiviCore Resources
-  - Contact
-  - Disclaimer
-  - Privacy Policy
-- First 10 resource posts created as drafts.
-- Slugs and categories assigned according to the content import checklist.
-- No content published yet.
-- No SheetBot links activated.
-- No lead capture activated.
+- Front-end QA completed.
+- Any layout/content/navigation issues listed.
 - No production DNS changes made.
 - No SheetBot files or configuration modified.
+- If no blocking issues are found, project may proceed to production-readiness planning.
+
+## TESTING
 
 ---
 
@@ -160,6 +129,75 @@ No backlog tasks currently listed.
 
 ## DONE
 
+### CTRL-018: Configure Initial WordPress Content Structure
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+WordPress staging was installed and accessible. The initial content structure was configured before importing, reviewing, and publishing the first staging content batch.
+
+Scope:
+
+Configure WordPress staging only. Do not publish public content until staging review is complete.
+
+Completion notes:
+
+- Initial WordPress content structure configured.
+- Required categories created.
+- Required pages created and later published on staging.
+- First 10 resource posts created and later published on staging.
+- Slugs, categories, and tags assigned.
+- Staging indexing remains disabled.
+- No SheetBot links activated.
+- No lead capture activated.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- WordPress staging content structure configured.
+- WordPress staging settings confirmed.
+- Staging search engine indexing disabled.
+- Permalink structure set to Post name.
+- Timezone set to Manila or UTC+8.
+- Initial WordPress categories created:
+  - LGU Letters
+  - Project Proposal Templates
+  - Right-of-Way and Permit-to-Enter
+  - Water District Resources
+  - Office Digitalization Guides
+  - Calculators and Tools
+- Required pages created as drafts:
+  - Homepage
+  - About CiviCore Resources
+  - Contact
+  - Disclaimer
+  - Privacy Policy
+- First 10 resource posts created as drafts.
+- Slugs and categories assigned according to the content import checklist.
+- Required pages and first 10 resource posts were later published on staging under CTRL-022.
+- No SheetBot links activated.
+- No lead capture activated.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+Acceptance criteria:
+
+- Required categories exist.
+- Required pages exist.
+- First 10 resource posts exist.
+- Slugs match planned URLs.
+- Staging indexing remains disabled.
+- No production DNS changes made.
+- No SheetBot files or config modified.
+
+---
+
 ### CTRL-022: Controlled Publish on WordPress Staging
 
 Status: DONE
@@ -199,7 +237,7 @@ Implementation notes:
 - Staging indexing remains disabled.
 - Permalinks confirmed as Post name.
 - Comments remain disabled on resource posts; reply forms are not visible.
-- Google Workspace post slug corrected to google-workspace-folder-structure-small-offices.
+- Google Workspace post slug corrected to /google-workspace-folder-structure-small-offices/.
 - Front-end URLs verified for Homepage, required pages, and first 10 resource posts.
 - Categories and tags display correctly.
 - No active SheetBot links found.
