@@ -46,9 +46,64 @@ Important correction:
 
 ## READY
 
+No ready tasks currently listed.
+
+## TESTING
+
+---
+
+### CTRL-015: Prepare WordPress Staging Installation Commands
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
+
+Scope:
+
+- Create /docs/WordPress_Staging_Installation_Commands.md.
+- Group commands into careful manual execution phases.
+- Record confirmed stack details.
+- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
+- Do not execute commands.
+- Do not install WordPress.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files or config.
+
+Acceptance criteria:
+
+- WordPress_Staging_Installation_Commands.md exists under /docs.
+- Commands are clearly marked for manual execution only after review.
+- Existing civicore and sheetbot configs are explicitly protected.
+- No commands are executed as part of this documentation task.
+
+Implementation notes:
+
+- WordPress staging installation command plan created.
+- Commands prepared but not executed.
+- No WordPress installation performed.
+- No server configuration changed.
+- No SheetBot files or config modified.
+
+---
+
+## BACKLOG
+
+No backlog tasks currently listed.
+
+---
+
+## DONE
+
 ### CTRL-025: Verify Production Server for Resource Library Deployment
 
-Status: READY
+Status: DONE
 
 Owner: Codex
 
@@ -113,58 +168,47 @@ Acceptance criteria:
 - No SheetBot files or configuration are modified.
 - Findings are recorded before any production deployment planning.
 
-## TESTING
-
----
-
-### CTRL-015: Prepare WordPress Staging Installation Commands
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: High
-
-Context:
-
-Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
-
-Scope:
-
-- Create /docs/WordPress_Staging_Installation_Commands.md.
-- Group commands into careful manual execution phases.
-- Record confirmed stack details.
-- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
-- Do not execute commands.
-- Do not install WordPress.
-- Do not change server configuration.
-- Do not add application logic.
-- Do not modify SheetBot files or config.
-
-Acceptance criteria:
-
-- WordPress_Staging_Installation_Commands.md exists under /docs.
-- Commands are clearly marked for manual execution only after review.
-- Existing civicore and sheetbot configs are explicitly protected.
-- No commands are executed as part of this documentation task.
-
 Implementation notes:
 
-- WordPress staging installation command plan created.
-- Commands prepared but not executed.
-- No WordPress installation performed.
-- No server configuration changed.
-- No SheetBot files or config modified.
+- Production server verified as ccit-prod-1.
+- Public IP confirmed as 159.89.206.141.
+- Private IPs reported: 10.15.0.7 and 10.104.0.5.
+- Ubuntu 24.04.4 LTS confirmed.
+- Nginx confirmed on ports 80 and 443.
+- Apache not found.
+- PHP 8.3.6 confirmed.
+- php8.3-fpm.service confirmed active and running.
+- PHP-FPM sockets found:
+  - /run/php/php8.3-fpm.sock
+  - /run/php/php8.3-fpm-sheetbot.sock
+  - /run/php/php-fpm.sock
+- MariaDB/MySQL client confirmed available.
+- UFW confirmed active with OpenSSH and Nginx Full allowed.
+- Certbot 2.9.0 confirmed available.
+- Existing live sites confirmed reachable:
+  - https://civicoreit.com/
+  - https://sheetbot.civicoreit.com/
+- Existing production Nginx configs identified:
+  - /etc/nginx/sites-available/civicoreit.com
+  - /etc/nginx/sites-available/sheetbot
+  - /etc/nginx/sites-available/default
+- Existing production web roots identified:
+  - /var/www/civicoreit.com/public
+  - /var/www/sheetbot/public
+- SheetBot uses a dedicated PHP-FPM socket:
+  - /run/php/php8.3-fpm-sheetbot.sock
+- Server-local backup paths observed:
+  - /var/www/backups
+  - /root/sheetbot-backups
+  - /var/backups
+- DigitalOcean snapshot availability was not confirmed from the server shell and should be confirmed in the DigitalOcean control panel before changes.
+- Findings recorded in /docs/Production_Server_Verification_Report.md.
+- No configuration files were modified.
+- No WordPress production installation was performed.
+- No DNS changes were made.
+- No SheetBot files or configuration were modified.
 
 ---
-
-## BACKLOG
-
-No backlog tasks currently listed.
-
----
-
-## DONE
 
 ### CTRL-024: Clean Up WordPress Staging Presentation
 
