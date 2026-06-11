@@ -46,7 +46,7 @@ Important correction:
 
 ## READY
 
-### CTRL-028: Confirm Production Backup and DNS Readiness
+### CTRL-029: Execute Production WordPress Installation
 
 Status: READY
 
@@ -56,39 +56,43 @@ Priority: High
 
 Context:
 
-Before executing production installation commands on ccit-prod-1, backup readiness and DNS control must be confirmed. The production server hosts both the official CiviCore website and SheetBot beta, so no production work should proceed without a recovery point.
+Production backup and DNS readiness have been confirmed. The next step is to execute the reviewed production WordPress installation commands on ccit-prod-1 for resources.civicoreit.com.
 
 Scope:
 
-Confirm readiness only. Do not install WordPress. Do not change DNS. Do not modify server configuration.
+Install an isolated production WordPress site on ccit-prod-1 using the prepared production structure. Do not modify existing CiviCore or SheetBot configurations except by adding a separate resources-production Nginx server block.
 
-Checklist:
+Execution plan:
 
-- DigitalOcean snapshot of ccit-prod-1 is created or a recent backup is confirmed.
-- Existing CiviCore website remains reachable:
+- Use /docs/Production_WordPress_Installation_Commands.md.
+- Create separate web root:
+  - /var/www/resources-production
+- Create separate database:
+  - resources_production_wp
+- Create separate database user:
+  - resources_prod_wp_user
+- Create separate Nginx config:
+  - /etc/nginx/sites-available/resources-production
+- Use production domain:
+  - resources.civicoreit.com
+- DNS target:
+  - resources.civicoreit.com -> 159.89.206.141
+- Issue SSL only after DNS resolves.
+- Keep production noindex until final validation is complete.
+- Validate existing live sites after installation:
   - https://civicoreit.com/
-- Existing SheetBot beta remains reachable:
   - https://sheetbot.civicoreit.com/
-- DNS control for civicoreit.com is confirmed.
-- Production DNS record is not yet changed.
-- Strong production database password is generated and stored securely outside GitHub.
-- WordPress production admin username and password plan is prepared.
-- Staging site remains available:
-  - https://resources-staging.civicoreit.com
-- Staging content export method is confirmed:
-  - WordPress export/import, or
-  - manual content copy if export/import causes formatting issues.
-- Production install commands have been reviewed.
-- Rollback notes have been reviewed.
 
 Acceptance Criteria:
 
-- Snapshot or backup confirmed before production work.
-- DNS control confirmed.
-- Credentials prepared but not committed.
-- No production DNS changes made yet.
-- No production installation performed yet.
-- No server configuration changed yet.
+- Production WordPress installed in isolated web root.
+- Production database and user created separately.
+- Production Nginx server block created separately.
+- resources.civicoreit.com loads over HTTPS.
+- WordPress dashboard is accessible.
+- Production remains noindex until final approval.
+- Existing CiviCore official site remains accessible.
+- Existing SheetBot beta remains accessible.
 - No SheetBot files or configuration modified.
 
 ---
@@ -145,6 +149,75 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-028: Confirm Production Backup and DNS Readiness
+
+Status: DONE
+
+Owner: User
+
+Priority: High
+
+Context:
+
+Before executing production installation commands on ccit-prod-1, backup readiness and DNS control must be confirmed. The production server hosts both the official CiviCore website and SheetBot beta, so no production work should proceed without a recovery point.
+
+Scope:
+
+Confirm readiness only. Do not install WordPress. Do not change DNS. Do not modify server configuration.
+
+Checklist:
+
+- DigitalOcean snapshot of ccit-prod-1 is created or a recent backup is confirmed.
+- Existing CiviCore website remains reachable:
+  - https://civicoreit.com/
+- Existing SheetBot beta remains reachable:
+  - https://sheetbot.civicoreit.com/
+- DNS control for civicoreit.com is confirmed.
+- Production DNS record is not yet changed.
+- Strong production database password is generated and stored securely outside GitHub.
+- WordPress production admin username and password plan is prepared.
+- Staging site remains available:
+  - https://resources-staging.civicoreit.com
+- Staging content export method is confirmed:
+  - WordPress export/import, or
+  - manual content copy if export/import causes formatting issues.
+- Production install commands have been reviewed.
+- Rollback notes have been reviewed.
+
+Acceptance Criteria:
+
+- Snapshot or backup confirmed before production work.
+- DNS control confirmed.
+- Credentials prepared but not committed.
+- No production DNS changes made yet.
+- No production installation performed yet.
+- No server configuration changed yet.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- DigitalOcean snapshot or recent backup for ccit-prod-1 confirmed.
+- Existing CiviCore website confirmed reachable:
+  - https://civicoreit.com/
+- Existing SheetBot beta confirmed reachable:
+  - https://sheetbot.civicoreit.com/
+- DNS control for civicoreit.com confirmed.
+- Production DNS for resources.civicoreit.com has not yet been changed.
+- Strong production database password generated and stored securely outside GitHub.
+- Production WordPress admin credential plan prepared.
+- Staging site remains available:
+  - https://resources-staging.civicoreit.com
+- Content migration approach confirmed:
+  - WordPress export/import first
+  - manual copy fallback if needed
+- Rollback notes reviewed.
+- No production DNS changes made.
+- No production installation performed.
+- No production server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-027: Prepare Production WordPress Installation Commands
 
