@@ -25,56 +25,51 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-### CTRL-023: Perform WordPress Staging Front-End QA
+### CTRL-024: Clean Up WordPress Staging Front-End Presentation
 
 Status: READY
 
-Owner: User / ChatGPT
+Owner: User / Codex
 
-Priority: High
+Priority: Medium
 
 Context:
 
-The first staging publication is complete. The required pages, homepage, and first 10 resource posts are now published on WordPress staging. A front-end QA pass is needed before considering production preparation.
+WordPress staging front-end QA found non-blocking presentation cleanup items after the first staging publication.
 
 Scope:
 
-Review the public-facing staging website only. Do not change production DNS. Do not modify SheetBot.
+Clean up WordPress staging presentation only. Do not change production DNS. Do not modify SheetBot.
 
-QA checklist:
+Cleanup checklist:
 
-- Homepage loads correctly.
-- Homepage is set as the static front page.
-- Main navigation works.
-- Required pages load:
-  - /about/
-  - /contact/
-  - /disclaimer/
-  - /privacy-policy/
-- First 10 resource post URLs load correctly.
-- Google Workspace post uses /google-workspace-folder-structure-small-offices/.
-- Category archive pages load correctly.
-- Tags display appropriately.
-- Resource pages have clean formatting.
-- Disclaimers display clearly where needed.
-- Legal-adjacent templates remain cautious.
-- Cost estimate template includes budgeting/procurement caution.
-- Comments are not visible on resource posts.
-- No default WordPress content appears.
-- No SheetBot links are active.
-- No lead capture forms are active.
-- No AdSense or premium downloads are active.
-- Site is usable on mobile view.
-- Staging indexing remains disabled.
-- Existing civicore and sheetbot staging sites remain unaffected.
+- Remove or hide visible internal metadata from published public pages/posts:
+  - Status: DRAFT
+  - Category metadata lines inside the content body, if redundant
+  - Slug metadata lines
+  - Meta Title and Meta Description metadata lines
+  - Tags metadata lines inside the content body, if redundant
+- Replace or remove default theme/footer navigation links:
+  - Blog
+  - FAQs
+  - Authors
+  - Events
+  - Shop
+  - Patterns
+  - Themes
+- Ensure the public navigation focuses on approved pages and resource browsing.
+- Keep staging indexing disabled.
+- Do not activate SheetBot links.
+- Do not activate lead capture forms.
+- Do not activate AdSense or premium downloads.
 
 Acceptance criteria:
 
-- Front-end QA completed.
-- Any layout/content/navigation issues listed.
+- Internal draft metadata is not shown to public visitors.
+- Default theme/demo navigation links are removed or replaced.
+- Public navigation is cleaner and appropriate for staging review.
 - No production DNS changes made.
 - No SheetBot files or configuration modified.
-- If no blocking issues are found, project may proceed to production-readiness planning.
 
 ## TESTING
 
@@ -128,6 +123,73 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-023: Perform WordPress Staging Front-End QA
+
+Status: DONE
+
+Owner: User / ChatGPT
+
+Priority: High
+
+Context:
+
+The first staging publication is complete. The required pages, homepage, and first 10 resource posts are now published on WordPress staging. A front-end QA pass was performed before considering production preparation.
+
+Scope:
+
+Review the public-facing staging website only. Do not change production DNS. Do not modify SheetBot.
+
+Implementation notes:
+
+- Front-end QA completed on WordPress staging.
+- Homepage loads correctly.
+- Homepage is set as the static front page.
+- Required pages load:
+  - /about/ redirects to /about-civicore-resources/ and loads correctly.
+  - /contact/ loads correctly.
+  - /disclaimer/ loads correctly.
+  - /privacy-policy/ loads correctly.
+- First 10 resource post URLs load correctly.
+- Google Workspace post uses /google-workspace-folder-structure-small-offices/.
+- Category archive pages load correctly.
+- Tags display appropriately.
+- Resource pages are readable on desktop and mobile.
+- Disclaimers display where needed.
+- Legal-adjacent templates remain cautious.
+- Cost estimate template includes budgeting/procurement caution.
+- Reply forms are not visible on resource posts.
+- No default WordPress Hello world or Sample Page content appears.
+- No active SheetBot links found.
+- No active lead capture forms found.
+- No AdSense or active premium downloads found.
+- Mobile viewport check passed with no horizontal overflow on sampled pages.
+- Staging pages include public noindex, nofollow robots meta.
+- Existing civicore staging site remained reachable.
+- Existing sheetbot staging site remained reachable.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+
+Issues found:
+
+- Published public content still displays internal draft metadata lines such as Status: DRAFT, Slug, Meta Title, Meta Description, and Tags.
+- Theme/footer navigation still exposes default/demo-style links such as Blog, FAQs, Authors, Events, Shop, Patterns, and Themes.
+- /about/ works through redirect, while the actual page URL is /about-civicore-resources/.
+
+Follow-up:
+
+- Added CTRL-024 to clean up public presentation before production-readiness planning.
+- No blocking functionality issues were found.
+
+Acceptance criteria:
+
+- Front-end QA completed.
+- Any layout/content/navigation issues listed.
+- No production DNS changes made.
+- No SheetBot files or configuration modified.
+- If no blocking issues are found, project may proceed to production-readiness planning after presentation cleanup.
+
+---
 
 ### CTRL-018: Configure Initial WordPress Content Structure
 
