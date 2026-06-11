@@ -93,6 +93,54 @@ Implementation notes:
 
 ---
 
+### CTRL-026: Prepare Production Deployment Plan
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Prepare a safe production deployment plan for launching the CiviCore Resource Library at https://resources.civicoreit.com.
+
+Scope:
+
+- Create /docs/Production_Deployment_Plan.md.
+- Document the confirmed production deployment target.
+- Document the production DNS target.
+- Recommend a separate production WordPress install.
+- Define production safety principles, backup checks, installation planning, migration, SEO, security, validation, and launch hold conditions.
+- Do not change production DNS.
+- Do not install WordPress on production.
+- Do not modify production server configuration.
+- Do not modify SheetBot files or configuration.
+
+Acceptance criteria:
+
+- Production deployment plan exists under /docs.
+- Production target is confirmed as ccit-prod-1 at 159.89.206.141.
+- Existing live sites are documented.
+- Separate production WordPress install is recommended.
+- No production DNS changes are made.
+- No production WordPress installation is performed.
+- No server configuration is changed.
+- No SheetBot files or configuration are modified.
+
+Implementation notes:
+
+- Production deployment plan created.
+- Production target confirmed as ccit-prod-1 at 159.89.206.141.
+- Existing live sites documented: civicoreit.com and sheetbot.civicoreit.com.
+- Separate production WordPress install recommended.
+- No production DNS changes made.
+- No production WordPress installation performed.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
 ## BACKLOG
 
 No backlog tasks currently listed.
