@@ -10,6 +10,27 @@ CiviCore Resource and Template Library
 
 This is separate from SheetBot. Do not modify SheetBot files, deployment, database, or production configuration.
 
+## Deployment Direction
+
+Production deployment target:
+
+- Server name: ccit-prod-1
+- Server IP: 159.89.206.141
+- Existing live sites:
+  - https://civicoreit.com/
+  - https://sheetbot.civicoreit.com/
+
+Staging server remains:
+
+- Server name: ccit-serv1
+- Server IP: 159.65.2.194
+- Staging URL: https://resources-staging.civicoreit.com
+
+Important correction:
+
+- Production DNS for resources.civicoreit.com should point to 159.89.206.141, not 159.65.2.194.
+- Do not change production DNS until production launch is approved.
+
 ---
 
 ## Task Status Legend
@@ -25,7 +46,72 @@ This is separate from SheetBot. Do not modify SheetBot files, deployment, databa
 
 ## READY
 
-No ready tasks currently listed.
+### CTRL-025: Verify Production Server for Resource Library Deployment
+
+Status: READY
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+The CiviCore Resource Library will be deployed to the production server ccit-prod-1 at 159.89.206.141. This server already hosts the official CiviCore IT Solutions website and the SheetBot beta. Before preparing production installation or migration commands, the server stack and existing site configuration must be verified.
+
+Scope:
+
+Gather production server facts only. Do not modify configuration. Do not install WordPress. Do not change DNS.
+
+Verification checklist:
+
+- Confirm hostname.
+- Confirm server IP addresses.
+- Confirm whether server uses Nginx or Apache.
+- Confirm services listening on ports 80 and 443.
+- Confirm PHP version.
+- Confirm PHP-FPM status if using Nginx.
+- Confirm MySQL or MariaDB availability.
+- Confirm current hosted sites.
+- Confirm available disk space.
+- Confirm firewall status.
+- Confirm Certbot availability.
+- Confirm Nginx/Apache available site configs.
+- Confirm existing production web roots.
+- Confirm current server names for civicoreit.com and sheetbot.civicoreit.com.
+- Confirm backup or snapshot availability before changes.
+
+Suggested read-only commands:
+
+```bash
+hostname
+hostname -I
+lsb_release -a
+sudo ss -tulpn | grep -E ':80|:443'
+nginx -v 2>/dev/null || true
+apache2 -v 2>/dev/null || true
+php -v
+systemctl list-units --type=service | grep php || true
+ls /run/php 2>/dev/null || true
+ls /etc/php 2>/dev/null || true
+mysql --version
+df -h
+sudo ufw status
+certbot --version 2>/dev/null || true
+ls /etc/nginx/sites-available 2>/dev/null || true
+ls /etc/nginx/sites-enabled 2>/dev/null || true
+ls /etc/apache2/sites-available 2>/dev/null || true
+sudo nginx -T 2>/dev/null | grep -E "server_name|root|fastcgi_pass" | head -n 120
+```
+
+Acceptance criteria:
+
+- Production server stack is identified.
+- Existing live site configs are identified.
+- No configuration files are modified.
+- No WordPress production installation is performed.
+- No DNS changes are made.
+- No SheetBot files or configuration are modified.
+- Findings are recorded before any production deployment planning.
 
 ## TESTING
 
