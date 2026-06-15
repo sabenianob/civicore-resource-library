@@ -48,7 +48,7 @@ Important correction:
 
 ### CTRL-031: Perform Production Front-End QA
 
-Status: TESTING
+Status: DONE
 
 Owner: User / ChatGPT
 
@@ -119,6 +119,13 @@ Acceptance Criteria:
 Implementation notes:
 
 - CTRL-032 cleanup was created to resolve production QA findings related to public-facing launch copy and placeholder contact details.
+- Follow-up production QA completed after CTRL-032 cleanup.
+- Duplicate body-level headings removed from Homepage and Contact.
+- Production page source confirmed noindex/nofollow remains enabled.
+- Homepage and Contact each render with a single visible H1 from the WordPress theme/page title.
+- Existing CiviCore and SheetBot sites remain reachable.
+- Nginx config test passes.
+- No SheetBot files or configuration modified.
 
 ---
 
@@ -196,10 +203,13 @@ Completion notes:
 - Homepage planning/scaffold language removed.
 - Homepage rewritten with public-facing CiviCore Resource Library copy.
 - Future SheetBot placeholder text removed.
+- Duplicate body-level Homepage heading removed.
 - Contact page placeholder details removed.
 - Contact page updated with inquiries@civicoreit.com.
 - Contact page updated with official website https://civicoreit.com/.
+- Duplicate body-level Contact heading removed.
 - Resources menu/anchor checked.
+- Production page source confirmed noindex/nofollow remains enabled.
 - Production noindex/nofollow remains enabled.
 - No SheetBot links activated.
 - No lead capture forms activated.
