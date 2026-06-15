@@ -46,33 +46,37 @@ Important correction:
 
 ## READY
 
-### CTRL-034: Post-Launch SEO Setup
+### CTRL-036: Submit Resource Library Sitemap to Google Search Console
 
 Status: READY
 
-Owner: User / Codex
+Owner: User
 
 Priority: Medium
 
 Context:
 
-The CiviCore Resource Library is now publicly indexable. The next step is post-launch SEO setup and monitoring.
+The production Resource Library is indexable and the sitemap is available. The next step is to add the property to Google Search Console and submit the sitemap.
 
 Scope:
 
-Prepare SEO basics only. Do not activate monetization or lead capture yet.
+Google Search Console only. Do not change WordPress content, DNS, server config, or SheetBot.
 
 Checklist:
 
-- Confirm sitemap availability.
-- Configure SEO plugin if selected.
-- Confirm page titles and meta descriptions.
-- Confirm robots.txt.
-- Add property to Google Search Console.
-- Submit sitemap to Search Console.
+- Add property for https://resources.civicoreit.com.
+- Verify ownership using available method.
+- Submit sitemap:
+  - https://resources.civicoreit.com/wp-sitemap.xml
 - Monitor indexing status.
-- Keep staging noindex,nofollow.
 - Do not submit staging sitemap.
+
+Acceptance Criteria:
+
+- Search Console property added.
+- Sitemap submitted.
+- Staging sitemap not submitted.
+- No site content or server configuration changed.
 
 ---
 
@@ -128,6 +132,60 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-034: Post-Launch SEO Setup
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: Medium
+
+Context:
+
+The CiviCore Resource Library is now publicly indexable. The next step is post-launch SEO setup and monitoring.
+
+Scope:
+
+Prepare SEO basics only. Do not activate monetization or lead capture yet.
+
+Checklist:
+
+- Confirm sitemap availability.
+- Configure SEO plugin if selected.
+- Confirm page titles and meta descriptions.
+- Confirm robots.txt.
+- Add property to Google Search Console.
+- Submit sitemap to Search Console.
+- Monitor indexing status.
+- Keep staging noindex,nofollow.
+- Do not submit staging sitemap.
+
+Completion notes:
+
+- Production site is publicly indexable.
+- Production noindex,nofollow is removed.
+- Production WordPress blog_public option confirmed as 1.
+- Production robots meta does not block indexing.
+- Staging remains noindex,nofollow.
+- Production sitemap checked:
+  - https://resources.civicoreit.com/wp-sitemap.xml
+- Production sitemap loads and references production URLs only.
+- Production robots.txt checked:
+  - https://resources.civicoreit.com/robots.txt
+- Production robots.txt includes the production sitemap and does not reference staging.
+- Basic SEO metadata and public page titles reviewed.
+- Public author display no longer exposes resoUser.
+- Required pages and sample resource posts reviewed.
+- No internal draft metadata visible.
+- Homepage and Contact have no duplicate visible H1.
+- Disclaimers remain visible where needed.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No SheetBot links, lead capture forms, AdSense, or premium downloads activated.
+- No SheetBot files or configuration modified.
+- Google Search Console setup and sitemap submission remain pending under CTRL-036.
+
+---
 
 ### CTRL-033: Enable Production Indexing and Public Launch
 
