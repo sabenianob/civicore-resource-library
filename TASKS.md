@@ -46,6 +46,120 @@ Important correction:
 
 ## READY
 
+### CTRL-034: Post-Launch SEO Setup
+
+Status: READY
+
+Owner: User / Codex
+
+Priority: Medium
+
+Context:
+
+The CiviCore Resource Library is now publicly indexable. The next step is post-launch SEO setup and monitoring.
+
+Scope:
+
+Prepare SEO basics only. Do not activate monetization or lead capture yet.
+
+Checklist:
+
+- Confirm sitemap availability.
+- Configure SEO plugin if selected.
+- Confirm page titles and meta descriptions.
+- Confirm robots.txt.
+- Add property to Google Search Console.
+- Submit sitemap to Search Console.
+- Monitor indexing status.
+- Keep staging noindex,nofollow.
+- Do not submit staging sitemap.
+
+---
+
+## TESTING
+
+---
+
+### CTRL-015: Prepare WordPress Staging Installation Commands
+
+Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
+
+Scope:
+
+- Create /docs/WordPress_Staging_Installation_Commands.md.
+- Group commands into careful manual execution phases.
+- Record confirmed stack details.
+- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
+- Do not execute commands.
+- Do not install WordPress.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files or config.
+
+Acceptance criteria:
+
+- WordPress_Staging_Installation_Commands.md exists under /docs.
+- Commands are clearly marked for manual execution only after review.
+- Existing civicore and sheetbot configs are explicitly protected.
+- No commands are executed as part of this documentation task.
+
+Implementation notes:
+
+- WordPress staging installation command plan created.
+- Commands prepared but not executed.
+- No WordPress installation performed.
+- No server configuration changed.
+- No SheetBot files or config modified.
+
+---
+
+## BACKLOG
+
+No backlog tasks currently listed.
+
+---
+
+## DONE
+
+### CTRL-033: Enable Production Indexing and Public Launch
+
+Status: DONE
+
+Owner: User
+
+Priority: High
+
+Completion notes:
+
+- Production indexing enabled for https://resources.civicoreit.com.
+- WordPress setting “Discourage search engines from indexing this site” was unchecked.
+- Rendered source confirmed no longer includes noindex,nofollow.
+- Homepage loads.
+- Required pages load:
+  - /about/
+  - /contact/
+  - /disclaimer/
+  - /privacy-policy/
+- First 10 resource posts load.
+- Existing https://civicoreit.com/ remains reachable.
+- Existing https://sheetbot.civicoreit.com/ remains reachable.
+- Staging site remains noindex,nofollow.
+- No SheetBot links activated.
+- No lead capture forms activated.
+- No AdSense activated.
+- No premium downloads activated.
+- No SheetBot files or configuration modified.
+
+---
+
 ### CTRL-031: Perform Production Front-End QA
 
 Status: DONE
@@ -128,59 +242,6 @@ Implementation notes:
 - No SheetBot files or configuration modified.
 
 ---
-
-## TESTING
-
----
-
-### CTRL-015: Prepare WordPress Staging Installation Commands
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: High
-
-Context:
-
-Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
-
-Scope:
-
-- Create /docs/WordPress_Staging_Installation_Commands.md.
-- Group commands into careful manual execution phases.
-- Record confirmed stack details.
-- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
-- Do not execute commands.
-- Do not install WordPress.
-- Do not change server configuration.
-- Do not add application logic.
-- Do not modify SheetBot files or config.
-
-Acceptance criteria:
-
-- WordPress_Staging_Installation_Commands.md exists under /docs.
-- Commands are clearly marked for manual execution only after review.
-- Existing civicore and sheetbot configs are explicitly protected.
-- No commands are executed as part of this documentation task.
-
-Implementation notes:
-
-- WordPress staging installation command plan created.
-- Commands prepared but not executed.
-- No WordPress installation performed.
-- No server configuration changed.
-- No SheetBot files or config modified.
-
----
-
-## BACKLOG
-
-No backlog tasks currently listed.
-
----
-
-## DONE
 
 ### CTRL-032: Clean Up Production Launch Copy
 
