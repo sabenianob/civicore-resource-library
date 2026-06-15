@@ -48,7 +48,7 @@ Important correction:
 
 ### CTRL-031: Perform Production Front-End QA
 
-Status: READY
+Status: TESTING
 
 Owner: User / ChatGPT
 
@@ -116,6 +116,10 @@ Acceptance Criteria:
 - Production remains noindex/nofollow until explicit approval.
 - No SheetBot files or configuration modified.
 
+Implementation notes:
+
+- CTRL-032 cleanup was created to resolve production QA findings related to public-facing launch copy and placeholder contact details.
+
 ---
 
 ## TESTING
@@ -170,6 +174,42 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-032: Clean Up Production Launch Copy
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: High
+
+Context:
+
+Production front-end QA found that the site was functional but not yet launch-ready because some public-facing copy still contained planning/scaffold language and placeholder contact details.
+
+Scope:
+
+Clean up production WordPress Homepage and Contact page copy only. Do not remove production noindex/nofollow. Do not activate SheetBot links, lead capture forms, AdSense, or premium downloads. Do not change production DNS. Do not modify SheetBot files or configuration.
+
+Completion notes:
+
+- Homepage planning/scaffold language removed.
+- Homepage rewritten with public-facing CiviCore Resource Library copy.
+- Future SheetBot placeholder text removed.
+- Contact page placeholder details removed.
+- Contact page updated with inquiries@civicoreit.com.
+- Contact page updated with official website https://civicoreit.com/.
+- Resources menu/anchor checked.
+- Production noindex/nofollow remains enabled.
+- No SheetBot links activated.
+- No lead capture forms activated.
+- No AdSense activated.
+- No premium downloads activated.
+- No production DNS changes made.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-030: Import Staging Content to Production WordPress
 
