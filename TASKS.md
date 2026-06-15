@@ -139,6 +139,14 @@ Priority: High
 
 Completion notes:
 
+Live confirmation:
+
+- WordPress blog_public option confirmed as 1.
+- Rendered homepage source confirmed no longer includes noindex,nofollow.
+- Rendered homepage source shows only the indexable robots meta value max-image-preview:large.
+- Production robots.txt confirmed available and includes https://resources.civicoreit.com/wp-sitemap.xml.
+- Staging rendered source confirmed still includes noindex,nofollow.
+
 - Production indexing enabled for https://resources.civicoreit.com.
 - WordPress setting “Discourage search engines from indexing this site” was unchecked.
 - Rendered source confirmed no longer includes noindex,nofollow.
