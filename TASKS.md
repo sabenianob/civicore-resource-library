@@ -46,37 +46,39 @@ Important correction:
 
 ## READY
 
-### CTRL-036: Submit Resource Library Sitemap to Google Search Console
+### CTRL-037: Monitor Initial Search Indexing
 
 Status: READY
 
 Owner: User
 
-Priority: Medium
+Priority: Low
 
 Context:
 
-The production Resource Library is indexable and the sitemap is available. The next step is to add the property to Google Search Console and submit the sitemap.
+The CiviCore Resource Library has been launched and the sitemap has been submitted to Google Search Console. The next step is to monitor indexing, coverage, and early search visibility.
 
 Scope:
 
-Google Search Console only. Do not change WordPress content, DNS, server config, or SheetBot.
+Monitoring only. Do not change site content unless issues are found and approved.
 
 Checklist:
 
-- Add property for https://resources.civicoreit.com.
-- Verify ownership using available method.
-- Submit sitemap:
-  - https://resources.civicoreit.com/wp-sitemap.xml
-- Monitor indexing status.
+- Check Google Search Console indexing status after a few days.
+- Monitor submitted sitemap status.
+- Review any "Discovered - currently not indexed" or "Crawled - currently not indexed" pages.
+- Inspect homepage URL if needed:
+  - https://resources.civicoreit.com/
+- Inspect key resource URLs if needed.
+- Monitor for crawl errors.
+- Keep staging noindex,nofollow.
 - Do not submit staging sitemap.
 
 Acceptance Criteria:
 
-- Search Console property added.
-- Sitemap submitted.
-- Staging sitemap not submitted.
-- No site content or server configuration changed.
+- Initial indexing status reviewed.
+- Any indexing issues documented.
+- No unnecessary production changes made.
 
 ---
 
@@ -133,6 +135,54 @@ No backlog tasks currently listed.
 
 ## DONE
 
+### CTRL-036: Submit Resource Library Sitemap to Google Search Console
+
+Status: DONE
+
+Owner: User
+
+Priority: Medium
+
+Context:
+
+The production Resource Library is indexable and the sitemap is available. The next step is to add the property to Google Search Console and submit the sitemap.
+
+Scope:
+
+Google Search Console only. Do not change WordPress content, DNS, server config, or SheetBot.
+
+Checklist:
+
+- Add property for https://resources.civicoreit.com.
+- Verify ownership using available method.
+- Submit sitemap:
+  - https://resources.civicoreit.com/wp-sitemap.xml
+- Monitor indexing status.
+- Do not submit staging sitemap.
+
+Acceptance Criteria:
+
+- Search Console property added.
+- Sitemap submitted.
+- Staging sitemap not submitted.
+- No site content or server configuration changed.
+
+Completion notes:
+
+- Google Search Console setup completed for:
+  - https://resources.civicoreit.com
+- Production sitemap submitted:
+  - https://resources.civicoreit.com/wp-sitemap.xml
+- Staging sitemap was not submitted.
+- Production remains publicly indexable.
+- Staging remains noindex,nofollow.
+- No WordPress content changes made.
+- No server configuration changes made.
+- No SheetBot links, lead capture forms, AdSense, or premium downloads activated.
+- No SheetBot files or configuration modified.
+
+---
+
 ### CTRL-034: Post-Launch SEO Setup
 
 Status: DONE
@@ -183,7 +233,8 @@ Completion notes:
 - Existing CiviCore and SheetBot sites remain reachable.
 - No SheetBot links, lead capture forms, AdSense, or premium downloads activated.
 - No SheetBot files or configuration modified.
-- Google Search Console setup and sitemap submission remain pending under CTRL-036.
+- Google Search Console setup and sitemap submission completed under CTRL-036.
+- Initial indexing monitoring continues under CTRL-037.
 
 ---
 
