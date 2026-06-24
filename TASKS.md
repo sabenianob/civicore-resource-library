@@ -46,9 +46,66 @@ Important correction:
 
 ## READY
 
-### CTRL-037: Monitor Initial Search Indexing
+### CTRL-038: Clean Up WordPress Sitemap Indexing Scope
 
 Status: READY
+
+Owner: User / Codex
+
+Priority: Medium
+
+Context:
+
+Google Search Console successfully processed the main sitemap index and the page/post sitemaps, but category, tag, and user child sitemaps show "Sitemap could not be read" with a General HTTP error. The Resource Library should keep posts/pages indexable while controlling unnecessary archive and author sitemap exposure.
+
+Scope:
+
+Inspect and clean up WordPress sitemap/indexing scope. Do not modify SheetBot. Do not change production server config unless separately approved.
+
+Checklist:
+
+- Test these sitemap URLs directly:
+  - https://resources.civicoreit.com/wp-sitemap-taxonomies-category-1.xml
+  - https://resources.civicoreit.com/wp-sitemap-taxonomies-post_tag-1.xml
+  - https://resources.civicoreit.com/wp-sitemap-users-1.xml
+- Record HTTP status results.
+- Confirm page sitemap remains successful.
+- Confirm post sitemap remains successful.
+- Decide whether category archives should remain indexable.
+- Prefer excluding/noindexing tag archives if they are thin.
+- Prefer excluding/noindexing user/author archives to avoid unnecessary author exposure.
+- Keep pages and posts indexable.
+- Keep main production sitemap active.
+- Do not submit staging sitemap.
+- Confirm staging remains noindex,nofollow.
+- Confirm existing https://civicoreit.com/ remains reachable.
+- Confirm existing https://sheetbot.civicoreit.com/ remains reachable.
+
+Recommended direction:
+
+- Keep pages and posts in the sitemap.
+- Keep categories only if useful and clean.
+- Exclude or noindex tag archives initially.
+- Exclude or noindex author/user archives.
+- If a trusted SEO plugin is installed, use its sitemap/indexing controls.
+- If no SEO plugin is installed, document the safest plugin-free or plugin-based option before changing behavior.
+
+Acceptance Criteria:
+
+- Exact HTTP behavior of the three error child sitemaps is recorded.
+- Author/user archive exposure is addressed or documented for follow-up.
+- Posts and pages remain indexable.
+- Main production sitemap remains readable.
+- No SheetBot files or configuration modified.
+- No unnecessary production changes made.
+
+---
+
+## TESTING
+
+### CTRL-037: Monitor Initial Search Indexing
+
+Status: TESTING
 
 Owner: User
 
@@ -80,9 +137,24 @@ Acceptance Criteria:
 - Any indexing issues documented.
 - No unnecessary production changes made.
 
----
+Monitoring notes:
 
-## TESTING
+- Main sitemap index was processed successfully.
+- Total discovered pages: 38.
+- Total discovered videos: 0.
+- Page sitemap is successful:
+  - /wp-sitemap-posts-page-1.xml
+- Post sitemap is successful:
+  - /wp-sitemap-posts-post-1.xml
+- The following child sitemaps show "Sitemap could not be read" with "General HTTP error":
+  - /wp-sitemap-taxonomies-category-1.xml
+  - /wp-sitemap-taxonomies-post_tag-1.xml
+  - /wp-sitemap-users-1.xml
+- Main pages and resource posts are still discoverable through successful page/post sitemaps.
+- Homepage is indexed.
+- Inner pages/posts are discovered but several are not yet indexed.
+- No blocking issue found for main page/post discovery.
+- Continue monitoring.
 
 ---
 
