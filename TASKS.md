@@ -46,9 +46,15 @@ Important correction:
 
 ## READY
 
+No ready tasks currently listed.
+
+---
+
+## TESTING
+
 ### CTRL-038: Clean Up WordPress Sitemap Indexing Scope
 
-Status: READY
+Status: TESTING
 
 Owner: User / Codex
 
@@ -99,9 +105,37 @@ Acceptance Criteria:
 - No SheetBot files or configuration modified.
 - No unnecessary production changes made.
 
----
+Implementation notes:
 
-## TESTING
+- Direct HTTP checks were performed from ccit-prod-1 for the child sitemap URLs that Google Search Console reported with General HTTP error.
+- Results:
+  - https://resources.civicoreit.com/wp-sitemap-taxonomies-category-1.xml returned HTTP/1.1 200 OK.
+  - https://resources.civicoreit.com/wp-sitemap-taxonomies-post_tag-1.xml returned HTTP/1.1 200 OK.
+  - https://resources.civicoreit.com/wp-sitemap-users-1.xml returned HTTP/1.1 200 OK.
+- Content-Type for all checked sitemap URLs is application/xml; charset=UTF-8.
+- Nginx served all checked sitemap URLs successfully.
+- No server-side fetch/access problem was confirmed.
+- Search Console child sitemap errors may be temporary or stale.
+- No Nginx changes were made.
+- No WordPress content changes were made.
+- No SheetBot files or configuration were modified.
+
+Assessment:
+
+- Main page and post discovery remains healthy.
+- No blocking issue found for production page/post indexing.
+- Continue monitoring Search Console after Google recrawls the sitemap.
+- Do not install an SEO plugin solely for this issue yet.
+- Consider a future SEO refinement to noindex or exclude author/user archives if needed.
+
+Testing acceptance notes:
+
+- Exact HTTP status of the three child sitemaps recorded.
+- CTRL-038 remains in TESTING pending Search Console refresh.
+- No production configuration changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-037: Monitor Initial Search Indexing
 
