@@ -46,93 +46,33 @@ Important correction:
 
 ## READY
 
-### CTRL-047: Perform Batch 2 Production Front-End QA
+### CTRL-048: Monitor Batch 2 Indexing
 
 Status: READY
 
-Owner: User / ChatGPT / Codex
+Owner: User
 
-Priority: Medium
+Priority: Low
 
 Context:
 
-Batch 2 resources have been published to production. A production front-end QA pass is required before marking the Batch 2 release complete.
+Batch 2 resources have been published to production and front-end QA has passed or is expected to pass. The next step is to monitor whether Google discovers and indexes the new Batch 2 URLs.
 
 Scope:
 
-Review production front-end only. Do not modify server configuration or SheetBot.
+Monitoring only. Do not change production content unless issues are found and approved.
 
 Acceptance Criteria:
 
-- All 10 Batch 2 production URLs load.
-- Formatting is clean.
-- Slugs are correct.
-- Categories and tags are correct.
-- Internal metadata is not visible.
-- Duplicate body-level H1 is not visible.
-- Disclaimers remain visible where needed.
-- Privacy/data handling reminders remain visible where needed.
-- Comments are disabled.
-- Production remains indexable.
-- Existing CiviCore and SheetBot sites remain reachable.
-- No SheetBot links, lead capture, AdSense, or premium downloads activated.
+- Batch 2 URLs checked in Google Search Console after a few days.
+- Sitemap status reviewed.
+- Any indexing issues documented.
+- Staging remains noindex,nofollow.
 - No SheetBot files or configuration modified.
 
 ---
 
 ## TESTING
-
-### CTRL-046: Publish Batch 2 Resources to Production
-
-Status: TESTING
-
-Owner: User / Codex
-
-Priority: Medium
-
-Context:
-
-Batch 2 resources have been imported and reviewed on WordPress staging. The next step is to publish the approved Batch 2 resources on production.
-
-Scope:
-
-Publish approved Batch 2 content to production only after staging review passes.
-
-Acceptance Criteria:
-
-- All 10 Batch 2 resources published on production.
-- Slugs match staging-approved URLs.
-- Categories and tags assigned.
-- Internal metadata is not visible.
-- Duplicate body-level H1 is not visible.
-- Disclaimers remain visible where needed.
-- Comments are disabled.
-- Production remains indexable.
-- Existing CiviCore and SheetBot sites remain reachable.
-- No SheetBot links, lead capture, AdSense, or premium downloads activated.
-- No SheetBot files or configuration modified.
-
-Implementation notes:
-
-- Batch 2 resources published on production.
-- All 10 Batch 2 production posts created/published.
-- Slugs matched staging-approved URLs.
-- Categories and tags assigned.
-- Internal metadata removed from visible content.
-- Duplicate body-level H1 avoided.
-- Disclaimers remain visible where needed.
-- Privacy/data handling reminders remain visible where needed.
-- Comments disabled on Batch 2 posts.
-- Production remains indexable.
-- No SheetBot links activated.
-- No lead capture forms activated.
-- No AdSense or premium downloads activated.
-- Existing CiviCore and SheetBot sites remain reachable.
-- Nginx config test passes.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
----
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
@@ -182,6 +122,120 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-047: Perform Batch 2 Production Front-End QA
+
+Status: DONE
+
+Owner: User / ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Batch 2 resources have been published to production. A production front-end QA pass is required before marking the Batch 2 release complete.
+
+Scope:
+
+Review production front-end only. Do not modify server configuration or SheetBot.
+
+Acceptance Criteria:
+
+- All 10 Batch 2 production URLs load.
+- Formatting is clean.
+- Slugs are correct.
+- Categories and tags are correct.
+- Internal metadata is not visible.
+- Duplicate body-level H1 is not visible.
+- Disclaimers remain visible where needed.
+- Privacy/data handling reminders remain visible where needed.
+- Comments are disabled.
+- Production remains indexable.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No SheetBot links, lead capture, AdSense, or premium downloads activated.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Batch 2 production front-end QA completed.
+- All 10 Batch 2 production URLs reviewed.
+- Formatting, slugs, categories, tags, disclaimers, comments, metadata, and public safety checks passed.
+- Production remains indexable.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No blocking issues found.
+
+---
+
+### CTRL-046: Publish Batch 2 Resources to Production
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: Medium
+
+Context:
+
+Batch 2 resources have been imported and reviewed on WordPress staging. The next step is to publish the approved Batch 2 resources on production.
+
+Scope:
+
+Publish approved Batch 2 content to production only after staging review passes.
+
+Acceptance Criteria:
+
+- All 10 Batch 2 resources published on production.
+- Slugs match staging-approved URLs.
+- Categories and tags assigned.
+- Internal metadata is not visible.
+- Duplicate body-level H1 is not visible.
+- Disclaimers remain visible where needed.
+- Comments are disabled.
+- Production remains indexable.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No SheetBot links, lead capture, AdSense, or premium downloads activated.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- Batch 2 resources published on production.
+- All 10 Batch 2 production posts created/published.
+- Slugs matched staging-approved URLs.
+- Categories and tags assigned.
+- Internal metadata removed from visible content.
+- Duplicate body-level H1 avoided.
+- Disclaimers remain visible where needed.
+- Privacy/data handling reminders remain visible where needed.
+- Comments disabled on Batch 2 posts.
+- Production remains indexable.
+- No SheetBot links activated.
+- No lead capture forms activated.
+- No AdSense or premium downloads activated.
+- Existing CiviCore and SheetBot sites remain reachable.
+- Nginx config test passes.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Batch 2 resources published on production.
+- All 10 Batch 2 production posts created and published.
+- All 10 URLs returned 200.
+- Slugs matched staging-approved URLs.
+- Categories and tags assigned.
+- Internal metadata removed from visible content.
+- Duplicate body-level H1 avoided.
+- Disclaimers remain visible where needed.
+- Comments disabled on Batch 2 posts.
+- Production remains indexable.
+- Existing CiviCore and SheetBot sites remain reachable.
+- Nginx config test passed.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+- No SheetBot links, lead capture, AdSense, or premium downloads activated.
+
+---
 
 ### CTRL-045: Review Batch 2 WordPress Staging Content
 
