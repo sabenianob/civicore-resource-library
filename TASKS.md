@@ -46,9 +46,47 @@ Important correction:
 
 ## READY
 
-### CTRL-040: Create Batch 2 Resource Draft Placeholders
+### CTRL-041: Draft Batch 2 Resources - Priority Set 1
 
 Status: READY
+
+Owner: ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Batch 2 draft placeholders have been created. The next step is to fill the first priority set of Batch 2 resources with complete first-draft content.
+
+Priority Set 1:
+
+- Barangay Resolution Template
+- Office Memorandum Template
+- Transmittal Letter Template
+- Water Service Interruption Advisory Template
+- Project Monitoring Report Template
+
+Scope:
+
+Fill markdown drafts only. Do not import to WordPress yet.
+
+Acceptance Criteria:
+
+- First five Batch 2 drafts are completed in markdown.
+- Professional government tone used.
+- Philippine local government/public-service context used where appropriate.
+- Disclaimers included where needed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
+## TESTING
+
+### CTRL-040: Create Batch 2 Resource Draft Placeholders
+
+Status: TESTING
 
 Owner: Codex
 
@@ -70,52 +108,10 @@ Acceptance Criteria:
 - No server configuration changed.
 - No SheetBot files or configuration modified.
 
----
-
-## TESTING
-
-### CTRL-039: Plan Second Batch of Resource Content
-
-Status: TESTING
-
-Owner: User / ChatGPT / Codex
-
-Priority: Medium
-
-Context:
-
-The Resource Library has launched, Search Console setup is complete, key pages are indexed, and sitemap health checks have passed. The next growth step is to plan the second batch of useful resource content.
-
-Scope:
-
-Planning only. Do not publish new content yet.
-
-Suggested Batch 2 topics:
-
-- Barangay Resolution Template
-- Certificate of Indigency Template
-- Project Monitoring Report Template
-- Office Memorandum Template
-- Transmittal Letter Template
-- Water Service Interruption Advisory Template
-- Customer Complaint Form Template
-- Simple Records Inventory Template
-- Meeting Minutes Template
-- Basic Website Content Checklist for Small Offices
-
-Acceptance Criteria:
-
-- Second content batch topics reviewed and prioritized.
-- Content categories assigned.
-- Drafting sequence proposed.
-- No WordPress content changes made until approved.
-
 Implementation notes:
 
-- Second batch content plan created.
-- Batch 2 topics listed and prioritized.
-- Categories and internal linking opportunities proposed.
-- Disclaimer/risk notes included.
+- Batch 2 draft placeholder files created under /content/drafts.
+- Each placeholder follows the existing resource draft structure.
 - No WordPress content changes made.
 - No server configuration changed.
 - No SheetBot files or configuration modified.
@@ -170,6 +166,64 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-039: Plan Second Batch of Resource Content
+
+Status: DONE
+
+Owner: User / ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+The Resource Library has launched, Search Console setup is complete, key pages are indexed, and sitemap health checks have passed. The next growth step is to plan the second batch of useful resource content.
+
+Scope:
+
+Planning only. Do not publish new content yet.
+
+Suggested Batch 2 topics:
+
+- Barangay Resolution Template
+- Certificate of Indigency Template
+- Project Monitoring Report Template
+- Office Memorandum Template
+- Transmittal Letter Template
+- Water Service Interruption Advisory Template
+- Customer Complaint Form Template
+- Simple Records Inventory Template
+- Meeting Minutes Template
+- Basic Website Content Checklist for Small Offices
+
+Acceptance Criteria:
+
+- Second content batch topics reviewed and prioritized.
+- Content categories assigned.
+- Drafting sequence proposed.
+- No WordPress content changes made until approved.
+
+Implementation notes:
+
+- Second batch content plan created.
+- Batch 2 topics listed and prioritized.
+- Categories and internal linking opportunities proposed.
+- Disclaimer/risk notes included.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Second batch content plan created.
+- Batch 2 topics listed and prioritized.
+- Categories and internal linking opportunities proposed.
+- Disclaimer/risk notes included.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-038: Clean Up WordPress Sitemap Indexing Scope
 
