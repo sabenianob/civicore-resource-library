@@ -46,43 +46,9 @@ Important correction:
 
 ## READY
 
-### CTRL-045: Review Batch 2 WordPress Staging Content
+### CTRL-046: Publish Batch 2 Resources to Production
 
 Status: READY
-
-Owner: User / ChatGPT / Codex
-
-Priority: Medium
-
-Context:
-
-Batch 2 resources have been imported to WordPress staging. The next step is to review the staging previews before production publication.
-
-Scope:
-
-Review staging content only. Do not publish to production yet.
-
-Acceptance Criteria:
-
-- All 10 Batch 2 staging posts reviewed.
-- Formatting is clean.
-- Slugs are correct.
-- Categories and tags are correct.
-- Internal metadata is not visible.
-- Duplicate body-level H1 is not visible.
-- Disclaimers remain visible where needed.
-- Comments are disabled.
-- Staging remains noindex,nofollow.
-- No production content changes made.
-- No SheetBot files or configuration modified.
-
----
-
-## TESTING
-
-### CTRL-044: Import Batch 2 Drafts to WordPress Staging
-
-Status: TESTING
 
 Owner: User / Codex
 
@@ -90,39 +56,29 @@ Priority: Medium
 
 Context:
 
-Batch 2 markdown drafts have been completed and reviewed. The next step is to import them to WordPress staging for preview and QA before production publication.
+Batch 2 resources have been imported and reviewed on WordPress staging. The next step is to publish the approved Batch 2 resources on production.
 
 Scope:
 
-Import Batch 2 content to WordPress staging only. Do not publish to production yet.
+Publish approved Batch 2 content to production only after staging review passes.
 
 Acceptance Criteria:
 
-- Batch 2 resources imported to WordPress staging.
-- Posts remain drafts or staging-only as appropriate.
+- All 10 Batch 2 resources published on production.
+- Slugs match staging-approved URLs.
 - Categories and tags assigned.
-- Slugs match markdown drafts.
+- Internal metadata is not visible.
+- Duplicate body-level H1 is not visible.
 - Disclaimers remain visible where needed.
-- No production WordPress content changes made.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
-Implementation notes:
-
-- Batch 2 drafts imported to WordPress staging.
-- Staging posts created for all 10 Batch 2 resources.
-- Categories and tags assigned.
-- Slugs matched markdown drafts.
-- Internal metadata removed from visible content.
-- Duplicate body-level H1 avoided.
-- Disclaimers remain visible where needed.
-- Comments disabled on Batch 2 resource posts.
-- Staging remains noindex,nofollow.
-- No production WordPress content changes made.
-- No server configuration changed.
+- Comments are disabled.
+- Production remains indexable.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No SheetBot links, lead capture, AdSense, or premium downloads activated.
 - No SheetBot files or configuration modified.
 
 ---
+
+## TESTING
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
@@ -172,6 +128,111 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-045: Review Batch 2 WordPress Staging Content
+
+Status: DONE
+
+Owner: User / ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Batch 2 resources have been imported to WordPress staging. The next step is to review the staging previews before production publication.
+
+Scope:
+
+Review staging content only. Do not publish to production yet.
+
+Acceptance Criteria:
+
+- All 10 Batch 2 staging posts reviewed.
+- Formatting is clean.
+- Slugs are correct.
+- Categories and tags are correct.
+- Internal metadata is not visible.
+- Duplicate body-level H1 is not visible.
+- Disclaimers remain visible where needed.
+- Comments are disabled.
+- Staging remains noindex,nofollow.
+- No production content changes made.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- All 10 Batch 2 staging posts reviewed.
+- Formatting is clean.
+- Slugs are correct.
+- Categories and tags are correct.
+- Internal metadata is not visible.
+- Duplicate body-level H1 is not visible.
+- Disclaimers remain visible where needed.
+- Privacy/data handling reminders remain visible where needed.
+- Comments are disabled.
+- Staging remains noindex,nofollow.
+- No production content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
+### CTRL-044: Import Batch 2 Drafts to WordPress Staging
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: Medium
+
+Context:
+
+Batch 2 markdown drafts have been completed and reviewed. The next step is to import them to WordPress staging for preview and QA before production publication.
+
+Scope:
+
+Import Batch 2 content to WordPress staging only. Do not publish to production yet.
+
+Acceptance Criteria:
+
+- Batch 2 resources imported to WordPress staging.
+- Posts remain drafts or staging-only as appropriate.
+- Categories and tags assigned.
+- Slugs match markdown drafts.
+- Disclaimers remain visible where needed.
+- No production WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- Batch 2 drafts imported to WordPress staging.
+- Staging posts created for all 10 Batch 2 resources.
+- Categories and tags assigned.
+- Slugs matched markdown drafts.
+- Internal metadata removed from visible content.
+- Duplicate body-level H1 avoided.
+- Disclaimers remain visible where needed.
+- Comments disabled on Batch 2 resource posts.
+- Staging remains noindex,nofollow.
+- No production WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Batch 2 drafts imported to WordPress staging.
+- 10 staging posts created as drafts.
+- Categories and tags assigned.
+- Slugs matched markdown drafts.
+- Internal metadata stripped from post body.
+- Comments closed.
+- Staging confirmed noindex,nofollow.
+- No production WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-043: Review Batch 2 Resource Drafts
 
