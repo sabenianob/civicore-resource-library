@@ -46,141 +46,36 @@ Important correction:
 
 ## READY
 
-### CTRL-043: Review Batch 2 Resource Drafts
+### CTRL-044: Import Batch 2 Drafts to WordPress Staging
 
 Status: READY
 
-Owner: User / ChatGPT / Codex
+Owner: User / Codex
 
 Priority: Medium
 
 Context:
 
-All Batch 2 markdown drafts have been completed. Before importing them to WordPress staging, the drafts should be reviewed for completeness, tone, metadata, disclaimers, formatting, and internal linking.
+Batch 2 markdown drafts have been completed and reviewed. The next step is to import them to WordPress staging for preview and QA before production publication.
 
 Scope:
 
-Review markdown drafts only. Do not import to WordPress yet.
+Import Batch 2 content to WordPress staging only. Do not publish to production yet.
 
 Acceptance Criteria:
 
-- All 10 Batch 2 drafts reviewed.
-- Metadata fields are complete.
-- Professional government/public-service tone confirmed.
-- Disclaimers present where needed.
-- Legal-adjacent templates use cautious language.
-- Privacy/data handling reminders present where needed.
-- Internal linking opportunities checked.
-- No WordPress content changes made.
+- Batch 2 resources imported to WordPress staging.
+- Posts remain drafts or staging-only as appropriate.
+- Categories and tags assigned.
+- Slugs match markdown drafts.
+- Disclaimers remain visible where needed.
+- No production WordPress content changes made.
 - No server configuration changed.
 - No SheetBot files or configuration modified.
 
 ---
 
 ## TESTING
-
-### CTRL-042: Draft Batch 2 Resources - Priority Set 2
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: Medium
-
-Context:
-
-Priority Set 1 Batch 2 drafts have been completed. The remaining Batch 2 drafts should now be filled.
-
-Priority Set 2:
-
-- Certificate of Indigency Template
-- Customer Complaint Form Template
-- Simple Records Inventory Template
-- Meeting Minutes Template
-- Basic Website Content Checklist for Small Offices
-
-Scope:
-
-Fill markdown drafts only. Do not import to WordPress yet.
-
-Acceptance Criteria:
-
-- Remaining five Batch 2 drafts are completed in markdown.
-- Professional government tone used.
-- Disclaimer/risk language included where needed.
-- No WordPress content changes made.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
-Implementation notes:
-
-- Priority Set 2 Batch 2 drafts completed in markdown.
-- Completed:
-  - Certificate of Indigency Template
-  - Customer Complaint Form Template
-  - Simple Records Inventory Template
-  - Meeting Minutes Template
-  - Basic Website Content Checklist for Small Offices
-- Professional government tone used.
-- Philippine local government/public-service context used where appropriate.
-- Disclaimer/risk language included where needed.
-- No WordPress content changes made.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
----
-
-### CTRL-041: Draft Batch 2 Resources - Priority Set 1
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: Medium
-
-Context:
-
-Batch 2 draft placeholders have been created. The next step is to fill the first priority set of Batch 2 resources with complete first-draft content.
-
-Priority Set 1:
-
-- Barangay Resolution Template
-- Office Memorandum Template
-- Transmittal Letter Template
-- Water Service Interruption Advisory Template
-- Project Monitoring Report Template
-
-Scope:
-
-Fill markdown drafts only. Do not import to WordPress yet.
-
-Acceptance Criteria:
-
-- First five Batch 2 drafts are completed in markdown.
-- Professional government tone used.
-- Philippine local government/public-service context used where appropriate.
-- Disclaimers included where needed.
-- No WordPress content changes made.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
-Implementation notes:
-
-- Priority Set 1 Batch 2 drafts completed in markdown.
-- Completed:
-  - Barangay Resolution Template
-  - Office Memorandum Template
-  - Transmittal Letter Template
-  - Water Service Interruption Advisory Template
-  - Project Monitoring Report Template
-- Professional government tone used.
-- Philippine local government/public-service context used where appropriate.
-- Disclaimers included where needed.
-- No WordPress content changes made.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
----
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
@@ -230,6 +125,186 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-043: Review Batch 2 Resource Drafts
+
+Status: DONE
+
+Owner: User / ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+All Batch 2 markdown drafts have been completed. Before importing them to WordPress staging, the drafts should be reviewed for completeness, tone, metadata, disclaimers, formatting, and internal linking.
+
+Scope:
+
+Review markdown drafts only. Do not import to WordPress yet.
+
+Acceptance Criteria:
+
+- All 10 Batch 2 drafts reviewed.
+- Metadata fields are complete.
+- Professional government/public-service tone confirmed.
+- Disclaimers present where needed.
+- Legal-adjacent templates use cautious language.
+- Privacy/data handling reminders present where needed.
+- Internal linking opportunities checked.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- All 10 Batch 2 drafts reviewed for completeness, tone, metadata, disclaimers, formatting, and internal linking.
+- No draft content corrections were needed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- All 10 Batch 2 drafts reviewed.
+- Metadata fields are complete.
+- Professional government/public-service tone confirmed.
+- Disclaimers present where needed.
+- Legal-adjacent templates use cautious language.
+- Privacy/data handling reminders present where needed.
+- Internal linking opportunities checked.
+- No blocking review issues found.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
+### CTRL-042: Draft Batch 2 Resources - Priority Set 2
+
+Status: DONE
+
+Owner: ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Priority Set 1 Batch 2 drafts have been completed. The remaining Batch 2 drafts should now be filled.
+
+Priority Set 2:
+
+- Certificate of Indigency Template
+- Customer Complaint Form Template
+- Simple Records Inventory Template
+- Meeting Minutes Template
+- Basic Website Content Checklist for Small Offices
+
+Scope:
+
+Fill markdown drafts only. Do not import to WordPress yet.
+
+Acceptance Criteria:
+
+- Remaining five Batch 2 drafts are completed in markdown.
+- Professional government tone used.
+- Disclaimer/risk language included where needed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- Priority Set 2 Batch 2 drafts completed in markdown.
+- Completed:
+  - Certificate of Indigency Template
+  - Customer Complaint Form Template
+  - Simple Records Inventory Template
+  - Meeting Minutes Template
+  - Basic Website Content Checklist for Small Offices
+- Professional government tone used.
+- Philippine local government/public-service context used where appropriate.
+- Disclaimer/risk language included where needed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Priority Set 2 Batch 2 drafts completed and reviewed.
+- Certificate of Indigency Template reviewed.
+- Customer Complaint Form Template reviewed.
+- Simple Records Inventory Template reviewed.
+- Meeting Minutes Template reviewed.
+- Basic Website Content Checklist for Small Offices reviewed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
+### CTRL-041: Draft Batch 2 Resources - Priority Set 1
+
+Status: DONE
+
+Owner: ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Batch 2 draft placeholders have been created. The next step is to fill the first priority set of Batch 2 resources with complete first-draft content.
+
+Priority Set 1:
+
+- Barangay Resolution Template
+- Office Memorandum Template
+- Transmittal Letter Template
+- Water Service Interruption Advisory Template
+- Project Monitoring Report Template
+
+Scope:
+
+Fill markdown drafts only. Do not import to WordPress yet.
+
+Acceptance Criteria:
+
+- First five Batch 2 drafts are completed in markdown.
+- Professional government tone used.
+- Philippine local government/public-service context used where appropriate.
+- Disclaimers included where needed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- Priority Set 1 Batch 2 drafts completed in markdown.
+- Completed:
+  - Barangay Resolution Template
+  - Office Memorandum Template
+  - Transmittal Letter Template
+  - Water Service Interruption Advisory Template
+  - Project Monitoring Report Template
+- Professional government tone used.
+- Philippine local government/public-service context used where appropriate.
+- Disclaimers included where needed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Priority Set 1 Batch 2 drafts completed and reviewed.
+- Barangay Resolution Template reviewed.
+- Office Memorandum Template reviewed.
+- Transmittal Letter Template reviewed.
+- Water Service Interruption Advisory Template reviewed.
+- Project Monitoring Report Template reviewed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-040: Create Batch 2 Resource Draft Placeholders
 
