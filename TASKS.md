@@ -46,9 +46,46 @@ Important correction:
 
 ## READY
 
-### CTRL-041: Draft Batch 2 Resources - Priority Set 1
+### CTRL-042: Draft Batch 2 Resources - Priority Set 2
 
 Status: READY
+
+Owner: ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Priority Set 1 Batch 2 drafts have been completed. The remaining Batch 2 drafts should now be filled.
+
+Priority Set 2:
+
+- Certificate of Indigency Template
+- Customer Complaint Form Template
+- Simple Records Inventory Template
+- Meeting Minutes Template
+- Basic Website Content Checklist for Small Offices
+
+Scope:
+
+Fill markdown drafts only. Do not import to WordPress yet.
+
+Acceptance Criteria:
+
+- Remaining five Batch 2 drafts are completed in markdown.
+- Professional government tone used.
+- Disclaimer/risk language included where needed.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
+## TESTING
+
+### CTRL-041: Draft Batch 2 Resources - Priority Set 1
+
+Status: TESTING
 
 Owner: ChatGPT / Codex
 
@@ -80,38 +117,18 @@ Acceptance Criteria:
 - No server configuration changed.
 - No SheetBot files or configuration modified.
 
----
-
-## TESTING
-
-### CTRL-040: Create Batch 2 Resource Draft Placeholders
-
-Status: TESTING
-
-Owner: Codex
-
-Priority: Medium
-
-Context:
-
-The second batch content plan has been prepared. The next step is to create markdown draft placeholders for the approved Batch 2 topics.
-
-Scope:
-
-Create draft files only. Do not publish to WordPress yet.
-
-Acceptance Criteria:
-
-- Batch 2 draft placeholder files are created under /content/drafts.
-- Each file follows the existing resource draft structure.
-- No WordPress content changes made.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
 Implementation notes:
 
-- Batch 2 draft placeholder files created under /content/drafts.
-- Each placeholder follows the existing resource draft structure.
+- Priority Set 1 Batch 2 drafts completed in markdown.
+- Completed:
+  - Barangay Resolution Template
+  - Office Memorandum Template
+  - Transmittal Letter Template
+  - Water Service Interruption Advisory Template
+  - Project Monitoring Report Template
+- Professional government tone used.
+- Philippine local government/public-service context used where appropriate.
+- Disclaimers included where needed.
 - No WordPress content changes made.
 - No server configuration changed.
 - No SheetBot files or configuration modified.
@@ -166,6 +183,48 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-040: Create Batch 2 Resource Draft Placeholders
+
+Status: DONE
+
+Owner: Codex
+
+Priority: Medium
+
+Context:
+
+The second batch content plan has been prepared. The next step is to create markdown draft placeholders for the approved Batch 2 topics.
+
+Scope:
+
+Create draft files only. Do not publish to WordPress yet.
+
+Acceptance Criteria:
+
+- Batch 2 draft placeholder files are created under /content/drafts.
+- Each file follows the existing resource draft structure.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- Batch 2 draft placeholder files created under /content/drafts.
+- Each placeholder follows the existing resource draft structure.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Batch 2 draft placeholder files created under /content/drafts.
+- Each placeholder follows the existing resource draft structure.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-039: Plan Second Batch of Resource Content
 
