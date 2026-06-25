@@ -46,9 +46,37 @@ Important correction:
 
 ## READY
 
-### CTRL-039: Plan Second Batch of Resource Content
+### CTRL-040: Create Batch 2 Resource Draft Placeholders
 
 Status: READY
+
+Owner: Codex
+
+Priority: Medium
+
+Context:
+
+The second batch content plan has been prepared. The next step is to create markdown draft placeholders for the approved Batch 2 topics.
+
+Scope:
+
+Create draft files only. Do not publish to WordPress yet.
+
+Acceptance Criteria:
+
+- Batch 2 draft placeholder files are created under /content/drafts.
+- Each file follows the existing resource draft structure.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
+## TESTING
+
+### CTRL-039: Plan Second Batch of Resource Content
+
+Status: TESTING
 
 Owner: User / ChatGPT / Codex
 
@@ -82,9 +110,17 @@ Acceptance Criteria:
 - Drafting sequence proposed.
 - No WordPress content changes made until approved.
 
----
+Implementation notes:
 
-## TESTING
+- Second batch content plan created.
+- Batch 2 topics listed and prioritized.
+- Categories and internal linking opportunities proposed.
+- Disclaimer/risk notes included.
+- No WordPress content changes made.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
