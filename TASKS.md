@@ -46,15 +46,98 @@ Important correction:
 
 ## READY
 
-No ready tasks currently listed.
+### CTRL-039: Plan Second Batch of Resource Content
+
+Status: READY
+
+Owner: User / ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+The Resource Library has launched, Search Console setup is complete, key pages are indexed, and sitemap health checks have passed. The next growth step is to plan the second batch of useful resource content.
+
+Scope:
+
+Planning only. Do not publish new content yet.
+
+Suggested Batch 2 topics:
+
+- Barangay Resolution Template
+- Certificate of Indigency Template
+- Project Monitoring Report Template
+- Office Memorandum Template
+- Transmittal Letter Template
+- Water Service Interruption Advisory Template
+- Customer Complaint Form Template
+- Simple Records Inventory Template
+- Meeting Minutes Template
+- Basic Website Content Checklist for Small Offices
+
+Acceptance Criteria:
+
+- Second content batch topics reviewed and prioritized.
+- Content categories assigned.
+- Drafting sequence proposed.
+- No WordPress content changes made until approved.
 
 ---
 
 ## TESTING
 
-### CTRL-038: Clean Up WordPress Sitemap Indexing Scope
+### CTRL-015: Prepare WordPress Staging Installation Commands
 
 Status: TESTING
+
+Owner: ChatGPT / Codex
+
+Priority: High
+
+Context:
+
+Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
+
+Scope:
+
+- Create /docs/WordPress_Staging_Installation_Commands.md.
+- Group commands into careful manual execution phases.
+- Record confirmed stack details.
+- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
+- Do not execute commands.
+- Do not install WordPress.
+- Do not change server configuration.
+- Do not add application logic.
+- Do not modify SheetBot files or config.
+
+Acceptance criteria:
+
+- WordPress_Staging_Installation_Commands.md exists under /docs.
+- Commands are clearly marked for manual execution only after review.
+- Existing civicore and sheetbot configs are explicitly protected.
+- No commands are executed as part of this documentation task.
+
+Implementation notes:
+
+- WordPress staging installation command plan created.
+- Commands prepared but not executed.
+- No WordPress installation performed.
+- No server configuration changed.
+- No SheetBot files or config modified.
+
+---
+
+## BACKLOG
+
+No backlog tasks currently listed.
+
+---
+
+## DONE
+
+### CTRL-038: Clean Up WordPress Sitemap Indexing Scope
+
+Status: DONE
 
 Owner: User / Codex
 
@@ -120,26 +203,26 @@ Implementation notes:
 - No WordPress content changes were made.
 - No SheetBot files or configuration were modified.
 
-Assessment:
+Completion notes:
 
-- Main page and post discovery remains healthy.
-- No blocking issue found for production page/post indexing.
-- Continue monitoring Search Console after Google recrawls the sitemap.
-- Do not install an SEO plugin solely for this issue yet.
-- Consider a future SEO refinement to noindex or exclude author/user archives if needed.
-
-Testing acceptance notes:
-
-- Exact HTTP status of the three child sitemaps recorded.
-- CTRL-038 remains in TESTING pending Search Console refresh.
-- No production configuration changes made.
-- No SheetBot files or configuration modified.
+- Google Search Console child sitemap errors refreshed successfully.
+- Main sitemap index processed successfully.
+- Total discovered pages: 38.
+- Total discovered videos: 0.
+- Page sitemap status: Success.
+- Post sitemap status: Success.
+- Category taxonomy sitemap status: Success.
+- Post tag taxonomy sitemap status: Success.
+- User sitemap status: Success.
+- Direct HTTP checks had previously confirmed all child sitemaps returned 200 OK.
+- No Nginx, WordPress content, or SheetBot changes were required.
+- No blocking sitemap issue remains.
 
 ---
 
 ### CTRL-037: Monitor Initial Search Indexing
 
-Status: TESTING
+Status: DONE
 
 Owner: User
 
@@ -190,56 +273,29 @@ Monitoring notes:
 - No blocking issue found for main page/post discovery.
 - Continue monitoring.
 
----
+Completion notes:
 
-### CTRL-015: Prepare WordPress Staging Installation Commands
-
-Status: TESTING
-
-Owner: ChatGPT / Codex
-
-Priority: High
-
-Context:
-
-Prepare a reviewed command plan for installing WordPress staging later at https://resources-staging.civicoreit.com.
-
-Scope:
-
-- Create /docs/WordPress_Staging_Installation_Commands.md.
-- Group commands into careful manual execution phases.
-- Record confirmed stack details.
-- Include safety checks, web root creation, database creation, WordPress download, wp-config.php setup, Nginx server block, DNS, SSL, setup wizard, validation, and rollback notes.
-- Do not execute commands.
-- Do not install WordPress.
-- Do not change server configuration.
-- Do not add application logic.
-- Do not modify SheetBot files or config.
-
-Acceptance criteria:
-
-- WordPress_Staging_Installation_Commands.md exists under /docs.
-- Commands are clearly marked for manual execution only after review.
-- Existing civicore and sheetbot configs are explicitly protected.
-- No commands are executed as part of this documentation task.
-
-Implementation notes:
-
-- WordPress staging installation command plan created.
-- Commands prepared but not executed.
-- No WordPress installation performed.
-- No server configuration changed.
-- No SheetBot files or config modified.
+- Initial Google indexing monitoring completed.
+- Google Search Console sitemap was submitted and processed.
+- Production homepage is indexed.
+- Key required pages are indexed:
+  - /about/
+  - /disclaimer/
+  - /contact/
+- Key resource posts are indexed:
+  - /lgu-request-letter-template/
+  - /barangay-project-proposal-template/
+  - /permit-to-enter-private-property-template/
+  - /water-system-project-proposal-template/
+  - /basic-project-cost-estimate-template/
+- No site-wide indexing blocker found.
+- Staging sitemap was not submitted.
+- Staging remains noindex,nofollow.
+- No production content/server changes made.
+- No SheetBot files or configuration modified.
+- No SheetBot links, lead capture forms, AdSense, or premium downloads activated.
 
 ---
-
-## BACKLOG
-
-No backlog tasks currently listed.
-
----
-
-## DONE
 
 ### CTRL-036: Submit Resource Library Sitemap to Google Search Console
 
