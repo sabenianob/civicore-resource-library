@@ -46,9 +46,39 @@ Important correction:
 
 ## READY
 
-### CTRL-048: Monitor Batch 2 Indexing
+### CTRL-049: Batch 2 Indexing Follow-Up Review
 
 Status: READY
+
+Owner: User
+
+Priority: Low
+
+Context:
+
+Batch 2 indexing monitoring checklist has been created. After Google has time to crawl the new URLs, a follow-up review should be performed using Google Search Console.
+
+Scope:
+
+Monitoring only. Do not change content unless indexing issues are confirmed and separately approved.
+
+Acceptance Criteria:
+
+- Batch 2 URLs checked in Google Search Console.
+- Sitemap status reviewed.
+- Indexed/not indexed status documented.
+- Any indexing issues documented.
+- No production content changes made unless separately approved.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+---
+
+## TESTING
+
+### CTRL-048: Monitor Batch 2 Indexing
+
+Status: TESTING
 
 Owner: User
 
@@ -70,9 +100,18 @@ Acceptance Criteria:
 - Staging remains noindex,nofollow.
 - No SheetBot files or configuration modified.
 
----
+Implementation notes:
 
-## TESTING
+- Batch 2 indexing monitoring checklist created.
+- All 10 Batch 2 production URLs listed for monitoring.
+- Google Search Console inspection fields prepared.
+- Monitoring schedule documented.
+- No production content changes made.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
