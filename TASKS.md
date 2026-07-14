@@ -46,34 +46,35 @@ Important correction:
 
 ## READY
 
-### CTRL-050: Review WordPress Archive Indexing Policy
+### CTRL-051: Implement Archive Noindex Policy
 
 Status: READY
 
-Owner: User / ChatGPT / Codex
+Owner: User / Codex
 
 Priority: Medium
 
 Context:
 
-Google Search Console reported many "Discovered - currently not indexed" URLs that appear to be tag archive pages and an author archive page. This is not a blocking issue, but it may create indexing noise for a young resource site.
+The archive indexing policy recommends noindexing tag archives and author archives while keeping resource posts, core pages, and category archives indexable.
 
 Scope:
 
-Review and decide the indexing policy for WordPress archive pages. Do not change settings until approved.
+Implement production WordPress noindex behavior for tag and author archives only, after approval.
 
 Acceptance Criteria:
 
-- Current archive URL exposure reviewed.
-- Tag archive indexing policy recommended.
-- Author archive indexing policy recommended.
-- Category archive indexing policy reviewed.
+- Tag archive pages output meta robots noindex.
+- Author archive pages output meta robots noindex.
 - Resource posts remain indexable.
+- Core pages remain indexable.
+- Category archives remain indexable.
 - Staging remains noindex,nofollow.
-- No production indexing setting changes made unless separately approved.
-- No server configuration changed.
+- Production does not become globally noindex.
+- No server configuration changed unless separately approved.
 - No DNS changes made.
 - No SheetBot files or configuration modified.
+- Validation results documented in TASKS.md.
 
 ---
 
@@ -127,6 +128,51 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-050: Review WordPress Archive Indexing Policy
+
+Status: DONE
+
+Owner: User / ChatGPT / Codex
+
+Priority: Medium
+
+Context:
+
+Google Search Console reported many "Discovered - currently not indexed" URLs that appear to be tag archive pages and an author archive page. This is not a blocking issue, but it may create indexing noise for a young resource site.
+
+Scope:
+
+Review and decide the indexing policy for WordPress archive pages. Do not change settings until approved.
+
+Acceptance Criteria:
+
+- Current archive URL exposure reviewed.
+- Tag archive indexing policy recommended.
+- Author archive indexing policy recommended.
+- Category archive indexing policy reviewed.
+- Resource posts remain indexable.
+- Staging remains noindex,nofollow.
+- No production indexing setting changes made unless separately approved.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- WordPress archive indexing policy reviewed.
+- GSC archive URL indexing noise documented.
+- Tag archive noindex recommendation documented.
+- Author archive noindex recommendation documented.
+- Category archives recommended to remain indexable for now and monitored.
+- Resource posts and core pages recommended to remain indexable.
+- No WordPress indexing settings changed.
+- No production content changed.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-049: Batch 2 Indexing Follow-Up Review
 
