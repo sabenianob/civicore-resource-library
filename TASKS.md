@@ -46,9 +46,40 @@ Important correction:
 
 ## READY
 
-### CTRL-051: Implement Archive Noindex Policy
+### CTRL-052: Validate Archive Noindex in Google Search Console
 
 Status: READY
+
+Owner: User
+
+Priority: Low
+
+Context:
+
+Tag archive and author archive pages have been set to noindex. The next step is to monitor Google Search Console and confirm archive indexing noise decreases after Google recrawls the archive URLs.
+
+Scope:
+
+Monitoring only. Do not change production content unless issues are confirmed and separately approved.
+
+Acceptance Criteria:
+
+- Google Search Console coverage/indexing status reviewed after Google recrawls archive URLs.
+- Tag archive noindex behavior confirmed where available.
+- Author archive noindex behavior confirmed where available.
+- Resource posts remain indexable.
+- Core pages remain indexable.
+- Category archives remain indexable.
+- No production global noindex issue detected.
+- No SheetBot files or configuration modified.
+
+---
+
+## TESTING
+
+### CTRL-051: Implement Archive Noindex Policy
+
+Status: TESTING
 
 Owner: User / Codex
 
@@ -76,9 +107,36 @@ Acceptance Criteria:
 - No SheetBot files or configuration modified.
 - Validation results documented in TASKS.md.
 
----
+Implementation notes:
 
-## TESTING
+- Archive noindex policy implemented.
+- Implementation used a small site-specific WordPress plugin because no active trusted SEO plugin was installed.
+- Tag archive pages now output meta robots noindex.
+- Author archive pages now output meta robots noindex.
+- Resource posts remain indexable.
+- Core pages remain indexable.
+- Category archives remain indexable.
+- Production does not output global noindex.
+- Staging remains noindex,nofollow.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+
+Validation results:
+
+- https://resources.civicoreit.com/tag/barangay-resolution/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- https://resources.civicoreit.com/tag/certificate-of-indigency/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- https://resources.civicoreit.com/tag/water-service-advisory/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- https://resources.civicoreit.com/author/civicore-resource-library/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- Resource post validation URLs returned 200 and did not output noindex.
+- Core page validation URLs returned 200 and did not output noindex.
+- Category archive validation URLs returned 200 and did not output noindex.
+- https://resources-staging.civicoreit.com/ remains `noindex, nofollow`.
+- https://civicoreit.com/ returned 200.
+- https://sheetbot.civicoreit.com/ returned 200.
+
+---
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
