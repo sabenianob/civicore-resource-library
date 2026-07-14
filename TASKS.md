@@ -46,72 +46,38 @@ Important correction:
 
 ## READY
 
-### CTRL-049: Batch 2 Indexing Follow-Up Review
+### CTRL-050: Review WordPress Archive Indexing Policy
 
 Status: READY
 
-Owner: User
+Owner: User / ChatGPT / Codex
 
-Priority: Low
-
-Context:
-
-Batch 2 indexing monitoring checklist has been created. After Google has time to crawl the new URLs, a follow-up review should be performed using Google Search Console.
-
-Scope:
-
-Monitoring only. Do not change content unless indexing issues are confirmed and separately approved.
-
-Acceptance Criteria:
-
-- Batch 2 URLs checked in Google Search Console.
-- Sitemap status reviewed.
-- Indexed/not indexed status documented.
-- Any indexing issues documented.
-- No production content changes made unless separately approved.
-- No server configuration changed.
-- No SheetBot files or configuration modified.
-
----
-
-## TESTING
-
-### CTRL-048: Monitor Batch 2 Indexing
-
-Status: TESTING
-
-Owner: User
-
-Priority: Low
+Priority: Medium
 
 Context:
 
-Batch 2 resources have been published to production and front-end QA has passed or is expected to pass. The next step is to monitor whether Google discovers and indexes the new Batch 2 URLs.
+Google Search Console reported many "Discovered - currently not indexed" URLs that appear to be tag archive pages and an author archive page. This is not a blocking issue, but it may create indexing noise for a young resource site.
 
 Scope:
 
-Monitoring only. Do not change production content unless issues are found and approved.
+Review and decide the indexing policy for WordPress archive pages. Do not change settings until approved.
 
 Acceptance Criteria:
 
-- Batch 2 URLs checked in Google Search Console after a few days.
-- Sitemap status reviewed.
-- Any indexing issues documented.
+- Current archive URL exposure reviewed.
+- Tag archive indexing policy recommended.
+- Author archive indexing policy recommended.
+- Category archive indexing policy reviewed.
+- Resource posts remain indexable.
 - Staging remains noindex,nofollow.
-- No SheetBot files or configuration modified.
-
-Implementation notes:
-
-- Batch 2 indexing monitoring checklist created.
-- All 10 Batch 2 production URLs listed for monitoring.
-- Google Search Console inspection fields prepared.
-- Monitoring schedule documented.
-- No production content changes made.
+- No production indexing setting changes made unless separately approved.
 - No server configuration changed.
 - No DNS changes made.
 - No SheetBot files or configuration modified.
 
 ---
+
+## TESTING
 
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
@@ -161,6 +127,96 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-049: Batch 2 Indexing Follow-Up Review
+
+Status: DONE
+
+Owner: User
+
+Priority: Low
+
+Context:
+
+Batch 2 indexing monitoring checklist has been created. After Google has time to crawl the new URLs, a follow-up review should be performed using Google Search Console.
+
+Scope:
+
+Monitoring only. Do not change content unless indexing issues are confirmed and separately approved.
+
+Acceptance Criteria:
+
+- Batch 2 URLs checked in Google Search Console.
+- Sitemap status reviewed.
+- Indexed/not indexed status documented.
+- Any indexing issues documented.
+- No production content changes made unless separately approved.
+- No server configuration changed.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Google Search Console follow-up review performed.
+- "Discovered - currently not indexed" examples reviewed.
+- Affected examples were primarily tag archive URLs and one author archive URL.
+- Finding classified as non-blocking for Batch 2 resource posts.
+- Recommendation documented to review archive indexing policy.
+- LGU Request Letter Template early impressions signal documented.
+- No production content changes made.
+- No server configuration changed.
+- No DNS changes made.
+- No WordPress indexing settings changed.
+- No SheetBot files or configuration modified.
+
+---
+
+### CTRL-048: Monitor Batch 2 Indexing
+
+Status: DONE
+
+Owner: User
+
+Priority: Low
+
+Context:
+
+Batch 2 resources have been published to production and front-end QA has passed or is expected to pass. The next step is to monitor whether Google discovers and indexes the new Batch 2 URLs.
+
+Scope:
+
+Monitoring only. Do not change production content unless issues are found and approved.
+
+Acceptance Criteria:
+
+- Batch 2 URLs checked in Google Search Console after a few days.
+- Sitemap status reviewed.
+- Any indexing issues documented.
+- Staging remains noindex,nofollow.
+- No SheetBot files or configuration modified.
+
+Implementation notes:
+
+- Batch 2 indexing monitoring checklist created.
+- All 10 Batch 2 production URLs listed for monitoring.
+- Google Search Console inspection fields prepared.
+- Monitoring schedule documented.
+- No production content changes made.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+
+Completion notes:
+
+- Batch 2 indexing monitoring checklist created.
+- All 10 Batch 2 production URLs listed for monitoring.
+- Google Search Console inspection fields prepared.
+- Monitoring schedule documented.
+- No production content changes made.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+
+---
 
 ### CTRL-047: Perform Batch 2 Production Front-End QA
 
