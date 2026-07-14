@@ -77,67 +77,6 @@ Acceptance Criteria:
 
 ## TESTING
 
-### CTRL-051: Implement Archive Noindex Policy
-
-Status: TESTING
-
-Owner: User / Codex
-
-Priority: Medium
-
-Context:
-
-The archive indexing policy recommends noindexing tag archives and author archives while keeping resource posts, core pages, and category archives indexable.
-
-Scope:
-
-Implement production WordPress noindex behavior for tag and author archives only, after approval.
-
-Acceptance Criteria:
-
-- Tag archive pages output meta robots noindex.
-- Author archive pages output meta robots noindex.
-- Resource posts remain indexable.
-- Core pages remain indexable.
-- Category archives remain indexable.
-- Staging remains noindex,nofollow.
-- Production does not become globally noindex.
-- No server configuration changed unless separately approved.
-- No DNS changes made.
-- No SheetBot files or configuration modified.
-- Validation results documented in TASKS.md.
-
-Implementation notes:
-
-- Archive noindex policy implemented.
-- Implementation used a small site-specific WordPress plugin because no active trusted SEO plugin was installed.
-- Tag archive pages now output meta robots noindex.
-- Author archive pages now output meta robots noindex.
-- Resource posts remain indexable.
-- Core pages remain indexable.
-- Category archives remain indexable.
-- Production does not output global noindex.
-- Staging remains noindex,nofollow.
-- Existing CiviCore and SheetBot sites remain reachable.
-- No server configuration changed.
-- No DNS changes made.
-- No SheetBot files or configuration modified.
-
-Validation results:
-
-- https://resources.civicoreit.com/tag/barangay-resolution/ returned 200 and output `max-image-preview:large, noindex, follow`.
-- https://resources.civicoreit.com/tag/certificate-of-indigency/ returned 200 and output `max-image-preview:large, noindex, follow`.
-- https://resources.civicoreit.com/tag/water-service-advisory/ returned 200 and output `max-image-preview:large, noindex, follow`.
-- https://resources.civicoreit.com/author/civicore-resource-library/ returned 200 and output `max-image-preview:large, noindex, follow`.
-- Resource post validation URLs returned 200 and did not output noindex.
-- Core page validation URLs returned 200 and did not output noindex.
-- Category archive validation URLs returned 200 and did not output noindex.
-- https://resources-staging.civicoreit.com/ remains `noindex, nofollow`.
-- https://civicoreit.com/ returned 200.
-- https://sheetbot.civicoreit.com/ returned 200.
-
----
-
 ### CTRL-015: Prepare WordPress Staging Installation Commands
 
 Status: TESTING
@@ -186,6 +125,68 @@ No backlog tasks currently listed.
 ---
 
 ## DONE
+
+### CTRL-051: Implement Archive Noindex Policy
+
+Status: DONE
+
+Owner: User / Codex
+
+Priority: Medium
+
+Context:
+
+The archive indexing policy recommends noindexing tag archives and author archives while keeping resource posts, core pages, and category archives indexable.
+
+Scope:
+
+Implement production WordPress noindex behavior for tag and author archives only, after approval.
+
+Acceptance Criteria:
+
+- Tag archive pages output meta robots noindex.
+- Author archive pages output meta robots noindex.
+- Resource posts remain indexable.
+- Core pages remain indexable.
+- Category archives remain indexable.
+- Staging remains noindex,nofollow.
+- Production does not become globally noindex.
+- No server configuration changed unless separately approved.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+- Validation results documented in TASKS.md.
+
+Implementation notes:
+
+- Archive noindex policy implemented using a small site-specific WordPress plugin.
+- Implementation used a small site-specific WordPress plugin because no active trusted SEO plugin was installed.
+- Tag archive pages output noindex, follow.
+- Author archive pages output noindex, follow.
+- Resource posts remain indexable.
+- Core pages remain indexable.
+- Category archives remain indexable.
+- Production does not output global noindex.
+- Staging remains noindex,nofollow.
+- Existing CiviCore and SheetBot sites remain reachable.
+- No server configuration changed.
+- No DNS changes made.
+- No SheetBot files or configuration modified.
+- Implementation documented in /docs/Archive_Noindex_Implementation.md.
+
+Validation results:
+
+- https://resources.civicoreit.com/tag/barangay-resolution/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- https://resources.civicoreit.com/tag/certificate-of-indigency/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- https://resources.civicoreit.com/tag/water-service-advisory/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- https://resources.civicoreit.com/author/civicore-resource-library/ returned 200 and output `max-image-preview:large, noindex, follow`.
+- Resource post validation URLs returned 200 and did not output noindex.
+- Core page validation URLs returned 200 and did not output noindex.
+- Category archive validation URLs returned 200 and did not output noindex.
+- https://resources-staging.civicoreit.com/ remains `noindex, nofollow`.
+- https://civicoreit.com/ returned 200.
+- https://sheetbot.civicoreit.com/ returned 200.
+
+---
 
 ### CTRL-050: Review WordPress Archive Indexing Policy
 
