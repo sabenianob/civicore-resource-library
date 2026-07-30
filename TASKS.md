@@ -40,6 +40,7 @@ Important correction:
 - IN_PROGRESS
 - TESTING
 - STAGING_VALIDATED
+- PRODUCTION_VALIDATED
 - DONE
 - BLOCKED
 
@@ -164,6 +165,57 @@ Remaining approval:
 
 - Production deployment requires separate explicit approval.
 - Search Console recrawling, validation, or indexing requests require separate approval.
+
+---
+
+## PRODUCTION VALIDATED
+
+### CTRL-054: Search Indexing Controls: Production Deployment and Validation
+
+Status: PRODUCTION_VALIDATED
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Deploy the staging-validated CiviCore Archive Noindex plugin v2.0.0 to the Resource Library production site and validate indexing controls without performing Search Console actions.
+
+Implementation notes:
+
+- Starting branch and commit: `main` at `1ceeb17`, clean and synchronized with `origin/main`.
+- Deployed at `2026-07-30T03:57:03Z` (`2026-07-30T11:57:03+0800`) to `ccit-prod-1` under `/var/www/resources-production`.
+- Replaced only `/var/www/resources-production/wp-content/plugins/civicore-archive-noindex/civicore-archive-noindex.php`.
+- Upgraded the active production plugin from version `1.0.0` to `2.0.0` atomically.
+- Preserved `www-data:www-data` ownership, plugin directory mode `755`, and plugin file mode `644`.
+- No activation toggle, rewrite flush, service restart, WordPress content change, or configuration change was required.
+- Rollback backup retained at `/var/backups/civicore/ctrl-054-20260730T035557Z`.
+- CiviCore corporate-site and SheetBot files and configuration were untouched.
+
+Validation results:
+
+- Previous checksum: `af8b69f39659352bb91d62c7e3505d29eefc9690ad7ef95bb54a93a3ce541f98`.
+- Repository, staging, candidate, and deployed v2.0.0 checksum: `f356e1ebb0c441470f9ab4369b89100042a8956f13b760173ddd2a9639d03082`.
+- Candidate and deployed files passed native PHP 8.3 syntax checks.
+- WP-CLI loaded WordPress 7.0 without warnings or fatal errors; core checksums and database checks passed.
+- Plugin v2.0.0 is active and production remains indexable with `blog_public=1`.
+- Internal sitemap providers are `posts,homepage`; taxonomy and user providers are absent.
+- Sitemap index returns `200` and advertises only post, page, and homepage sitemap groups.
+- Homepage sitemap returns `200` and contains `https://resources.civicoreit.com/`.
+- Legacy taxonomy and user sitemap paths are no longer advertised and contain no sitemap URL entries.
+- Category, tag, and author archives return `200` with `noindex, follow`.
+- Corresponding archive feeds return `200` with `X-Robots-Tag: noindex, follow`.
+- Homepage, Contact, and three resource articles return `200`, use self-referencing canonicals, and do not emit `noindex`.
+- `robots.txt` permits indexable crawling and advertises the production sitemap.
+- No redirects, `5xx` responses, rendered PHP warnings, or new relevant log errors were found.
+- `https://civicoreit.com/` and `https://sheetbot.civicoreit.com/` both returned `200`.
+- Rollback was not required. Search Console was untouched.
+- Full evidence is recorded in `/docs/Search_Indexing_Follow_Up_2026-07-30.md`.
+
+Remaining approval:
+
+- Search Console live testing, sitemap follow-up, recrawling, and indexing requests remain separate manual actions requiring approval.
 
 ---
 
