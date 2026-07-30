@@ -39,6 +39,7 @@ Important correction:
 - READY
 - IN_PROGRESS
 - TESTING
+- STAGING_VALIDATED
 - DONE
 - BLOCKED
 
@@ -115,6 +116,54 @@ Implementation notes:
 - No WordPress installation performed.
 - No server configuration changed.
 - No SheetBot files or config modified.
+
+---
+
+## STAGING VALIDATED
+
+### CTRL-053: Search Indexing Controls: Staging Deployment and Validation
+
+Status: STAGING_VALIDATED
+
+Owner: Codex
+
+Priority: High
+
+Context:
+
+Deploy and validate the updated archive-noindex and sitemap controls on staging while preserving the global discourage-search-engines setting. Production deployment and Search Console actions are not included.
+
+Implementation notes:
+
+- Starting branch and commit: `main` at `b0c75a4` with a clean working tree synchronized to `origin/main`.
+- Prepared commit `5cd6d5e` and equivalent repository changes were not present.
+- Added the site-specific plugin source at `/wordpress/plugins/civicore-archive-noindex/civicore-archive-noindex.php`.
+- Deployed and activated plugin version `2.0.0` on `ccit-serv1` at `/var/www/resources-staging` only.
+- Added `noindex, follow` for category, tag, and author archives and their feeds.
+- Removed taxonomy and user sitemap providers and registered a dedicated homepage sitemap provider.
+- Canonical handling was not changed.
+- Staging `blog_public` remained `0`; public `wp-sitemap.xml` continued to return `404` as intended.
+- Production, Search Console, DNS, server configuration, WordPress core, themes, content, and SheetBot were untouched.
+
+Validation results:
+
+- Candidate and deployed plugin passed native PHP 8.3 syntax checks.
+- Previous staging plugin state was absent and inactive; rollback state is recorded at `/var/backups/civicore/ctrl-053-20260730T034701Z`.
+- Deployed SHA-256: `f356e1ebb0c441470f9ab4369b89100042a8956f13b760173ddd2a9639d03082`.
+- Plugin status: active, version `2.0.0`, owner `www-data:www-data`, mode `644`.
+- WP-CLI 2.12.0 loaded WordPress 7.0.2 without PHP warnings or fatal errors; database checks passed.
+- Disabled-mode internal providers: `homepage`; taxonomy and user providers absent.
+- Process-local enabled-mode simulation: `posts,homepage`; taxonomy and user providers absent; persisted `blog_public` remained `0`.
+- Category, tag, and author archive pages returned `200` with `noindex, follow`.
+- Corresponding archive feeds returned `200` with `X-Robots-Tag: noindex, follow`.
+- Homepage, Contact, and a representative resource post returned `200` with self-referencing canonicals and staging `noindex, nofollow`.
+- Staging Nginx and WordPress debug logs contained no new errors; PHP-FPM reported no warnings since deployment.
+- Full evidence is recorded in `/docs/Search_Indexing_Follow_Up_2026-07-30.md`.
+
+Remaining approval:
+
+- Production deployment requires separate explicit approval.
+- Search Console recrawling, validation, or indexing requests require separate approval.
 
 ---
 
